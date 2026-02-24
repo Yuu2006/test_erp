@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Kinh doanh — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;transition:all .15s;text-decoration:none;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:4px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<!-- SIDEBAR -->
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <div class="px-3 py-3 border-b border-slate-800">
+    <div class="bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-2 cursor-pointer hover:bg-slate-700">
+      <div class="w-7 h-7 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">LT</div>
+      <div><p class="text-white text-xs font-semibold">Lê Thị B</p><p class="text-slate-400 text-xs">Kinh doanh & Marketing</p></div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Tổng quan</p>
+    <a href="dashboard-sales.html" class="ni na"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke-width="2"/></svg>Dashboard</a>
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <a href="tour-instances.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+    <a href="digital-passport.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"/></svg>Hộ chiếu số</a>
+    <a href="vouchers.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>Voucher</a>
+    <a href="tour-templates.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="eco-catalog.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>Chương trình xanh</a>
+    <a href="reports.html" class="ni"><svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Báo cáo</a>
+  </nav>
+  <div class="border-t border-slate-800 p-3">
+    <div class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-slate-800 cursor-pointer">
+      <div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold">LT</div>
+      <div class="min-w-0"><p class="text-white text-xs font-semibold">Lê Thị B</p><p class="text-slate-400 text-xs">sales@ecotour.vn</p></div>
+    </div>
+  </div>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <nav class="flex items-center gap-1.5 text-sm"><span class="text-slate-400">EcoTour</span><svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span class="text-slate-700 font-medium">Dashboard Kinh doanh</span></nav>
+    <div class="ml-auto flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-2 bg-slate-100 rounded-lg px-3 py-2 text-sm text-slate-400 cursor-pointer"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>Tìm kiếm...</div>
+      <div class="w-9 h-9 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold cursor-pointer">LT</div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6 space-y-6">
+    <div class="flex items-center justify-between">
+      <div><h1 class="text-xl font-bold text-slate-900">Dashboard Kinh doanh & Marketing</h1><p class="text-sm text-slate-400 mt-0.5">Theo dõi doanh số, booking và chiến dịch ưu đãi</p></div>
+      <a href="bookings.html" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Tạo đặt tour</a>
+    </div>
+
+    <!-- KPI Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-center justify-between mb-3"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Booking mới hôm nay</p><div class="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center"><svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></div></div>
+        <p class="text-3xl font-bold text-slate-900">43</p>
+        <div class="flex items-center gap-1.5 mt-1.5"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full">↑ +18%</span><span class="text-xs text-slate-400">vs hôm qua</span></div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-center justify-between mb-3"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Doanh thu chờ TT</p><div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center"><svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div></div>
+        <p class="text-3xl font-bold text-slate-900">128 triệu</p>
+        <div class="flex items-center gap-1.5 mt-1.5"><span class="inline-flex text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-full">28 đơn Pending</span></div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-center justify-between mb-3"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Voucher đã dùng</p><div class="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center"><svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg></div></div>
+        <p class="text-3xl font-bold text-slate-900">312</p>
+        <div class="flex items-center gap-1.5 mt-1.5"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full">Tiết kiệm 92tr</span></div>
+      </div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-center justify-between mb-3"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Tỷ lệ chuyển đổi</p><div class="w-9 h-9 bg-teal-100 rounded-lg flex items-center justify-center"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div></div>
+        <p class="text-3xl font-bold text-slate-900">24.7%</p>
+        <div class="mt-2 w-full bg-slate-100 rounded-full h-2"><div class="bg-teal-500 h-2 rounded-full" style="width:24.7%"></div></div>
+      </div>
+    </div>
+
+    <!-- Low Occupancy Alert -->
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+      <div class="flex items-center gap-3 mb-3">
+        <svg class="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+        <h3 class="font-semibold text-amber-800 text-sm">⚡ Cảnh báo lấp đầy thấp — Cơ hội tạo Last-minute deal</h3>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="text-xs font-semibold text-amber-700 uppercase tracking-wide">
+            <th class="text-left pb-2">Tour</th><th class="text-right pb-2">Khởi hành</th><th class="text-right pb-2">Lấp đầy</th><th class="text-right pb-2">Chỗ còn</th><th class="text-right pb-2">Hành động</th>
+          </tr></thead>
+          <tbody class="divide-y divide-amber-100">
+            <tr class="hover:bg-amber-100/50">
+              <td class="py-2.5 font-medium text-slate-700">Đà Lạt Xanh 3N2Đ #TI2031</td>
+              <td class="py-2.5 text-right text-slate-600">05/03/2026</td>
+              <td class="py-2.5 text-right"><span class="font-bold text-amber-700">38%</span></td>
+              <td class="py-2.5 text-right text-slate-600">31 chỗ</td>
+              <td class="py-2.5 text-right"><button class="text-xs bg-amber-600 text-white px-3 py-1.5 rounded-lg font-semibold hover:bg-amber-700">Tạo deal</button></td>
+            </tr>
+            <tr class="hover:bg-amber-100/50">
+              <td class="py-2.5 font-medium text-slate-700">Ninh Bình eco 2N1Đ #TI2028</td>
+              <td class="py-2.5 text-right text-slate-600">08/03/2026</td>
+              <td class="py-2.5 text-right"><span class="font-bold text-amber-700">42%</span></td>
+              <td class="py-2.5 text-right text-slate-600">23 chỗ</td>
+              <td class="py-2.5 text-right"><button class="text-xs bg-amber-600 text-white px-3 py-1.5 rounded-lg font-semibold hover:bg-amber-700">Tạo deal</button></td>
+            </tr>
+            <tr class="hover:bg-amber-100/50">
+              <td class="py-2.5 font-medium text-slate-700">Cần Thơ 2N1Đ Miền Tây #TI2027</td>
+              <td class="py-2.5 text-right text-slate-600">10/03/2026</td>
+              <td class="py-2.5 text-right"><span class="font-bold text-rose-700">22%</span></td>
+              <td class="py-2.5 text-right text-slate-600">39 chỗ</td>
+              <td class="py-2.5 text-right"><button class="text-xs bg-rose-600 text-white px-3 py-1.5 rounded-lg font-semibold hover:bg-rose-700">Khẩn cấp</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recent Bookings + Voucher Effectiveness -->
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4">
+      <div class="xl:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+          <h3 class="font-semibold text-slate-800">Booking gần đây</h3>
+          <a href="bookings.html" class="text-xs text-emerald-600 font-semibold hover:underline">Xem tất cả</a>
+        </div>
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-50 border-b border-slate-100">
+            <th class="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Mã đơn</th>
+            <th class="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Khách hàng</th>
+            <th class="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Tour</th>
+            <th class="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Tổng tiền</th>
+            <th class="text-center px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Trạng thái</th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b border-slate-50 hover:bg-slate-50"><td class="px-5 py-3.5 font-mono text-xs text-slate-500">BK-20240224</td><td class="px-5 py-3.5 font-medium text-slate-800">Nguyễn Minh C</td><td class="px-5 py-3.5 text-slate-600">Hội An 3N2Đ</td><td class="px-5 py-3.5 text-right font-semibold text-slate-800">6,800,000 ₫</td><td class="px-5 py-3.5 text-center"><span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full">Confirmed</span></td></tr>
+            <tr class="border-b border-slate-50 hover:bg-slate-50"><td class="px-5 py-3.5 font-mono text-xs text-slate-500">BK-20240223</td><td class="px-5 py-3.5 font-medium text-slate-800">Trần Thị D</td><td class="px-5 py-3.5 text-slate-600">Phú Quốc 4N3Đ</td><td class="px-5 py-3.5 text-right font-semibold text-slate-800">15,200,000 ₫</td><td class="px-5 py-3.5 text-center"><span class="inline-flex text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">Pending</span></td></tr>
+            <tr class="border-b border-slate-50 hover:bg-slate-50"><td class="px-5 py-3.5 font-mono text-xs text-slate-500">BK-20240223</td><td class="px-5 py-3.5 font-medium text-slate-800">Phạm Văn E</td><td class="px-5 py-3.5 text-slate-600">Sapa 5N4Đ</td><td class="px-5 py-3.5 text-right font-semibold text-slate-800">22,500,000 ₫</td><td class="px-5 py-3.5 text-center"><span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full">Confirmed</span></td></tr>
+            <tr class="border-b border-slate-50 hover:bg-slate-50"><td class="px-5 py-3.5 font-mono text-xs text-slate-500">BK-20240222</td><td class="px-5 py-3.5 font-medium text-slate-800">Lê Quang F</td><td class="px-5 py-3.5 text-slate-600">Hạ Long 2N1Đ</td><td class="px-5 py-3.5 text-right font-semibold text-slate-800">8,900,000 ₫</td><td class="px-5 py-3.5 text-center"><span class="inline-flex text-xs font-semibold bg-rose-100 text-rose-700 px-2.5 py-0.5 rounded-full">Cancelled</span></td></tr>
+            <tr class="hover:bg-slate-50"><td class="px-5 py-3.5 font-mono text-xs text-slate-500">BK-20240222</td><td class="px-5 py-3.5 font-medium text-slate-800">Hoàng Thị G</td><td class="px-5 py-3.5 text-slate-600">Đà Lạt 3N2Đ</td><td class="px-5 py-3.5 text-right font-semibold text-slate-800">11,400,000 ₫</td><td class="px-5 py-3.5 text-center"><span class="inline-flex text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Voucher & Green Stats -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="font-semibold text-slate-800 mb-4">Hiệu quả Voucher</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>SUMMER2026 (20%)</span><span class="font-semibold text-slate-700">148 / 200</span></div>
+              <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width:74%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>GREEN500K</span><span class="font-semibold text-slate-700">89 / 150</span></div>
+              <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:59%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>LAST2026 (30%)</span><span class="font-semibold text-slate-700">31 / 50</span></div>
+              <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-amber-500 h-2 rounded-full" style="width:62%"></div></div>
+            </div>
+          </div>
+          <a href="vouchers.html" class="mt-4 w-full flex items-center justify-center text-xs text-purple-600 font-semibold border border-purple-200 rounded-lg py-2 hover:bg-purple-50 transition-colors">Quản lý Voucher</a>
+        </div>
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl p-5 text-white">
+          <div class="flex items-center gap-2 mb-3"><svg class="w-5 h-5 text-emerald-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><h3 class="font-semibold text-sm">Green Loyalty</h3></div>
+          <p class="text-3xl font-bold tabular-nums">48,230</p>
+          <p class="text-emerald-200 text-xs mt-1">Green Points đã cấp tháng này</p>
+          <div class="mt-3 pt-3 border-t border-emerald-500 flex justify-between text-xs text-emerald-100">
+            <span>312 hành động xanh</span><span>89 đổi Voucher</span>
+          </div>
+          <a href="eco-catalog.html" class="mt-3 block w-full text-center text-xs bg-white/20 hover:bg-white/30 text-white font-semibold py-2 rounded-lg transition-colors">Quản lý xanh →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

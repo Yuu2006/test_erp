@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết tour — EcoTour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .tab-btn{padding:8px 16px;border-radius:8px;font-size:.875rem;font-weight:500;color:#64748b;cursor:pointer;transition:all .15s;}
+    .tab-btn.active{background:#ecfdf5;color:#059669;font-weight:600;}
+    .tab-panel{display:none;}.tab-panel.active{display:block;}
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-700">
+
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-5 flex items-center gap-3 h-14">
+    <a href="tour-search.html" class="flex items-center gap-1.5 text-sm text-slate-500 hover:text-emerald-600"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>Quay lại</a>
+    <div class="w-px h-4 bg-slate-200"></div>
+    <span class="text-sm font-semibold text-slate-700 truncate">Phú Quốc Eco Discovery 4N3Đ</span>
+    <a href="profile.html" class="ml-auto w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">LM</a>
+  </div>
+</nav>
+
+<div class="max-w-6xl mx-auto px-5 py-6 flex flex-col lg:flex-row gap-6">
+  <!-- Main content -->
+  <div class="flex-1 space-y-5">
+    <!-- Gallery -->
+    <div class="bg-gradient-to-br from-teal-400 to-emerald-600 rounded-2xl h-60 flex items-center justify-center text-white/40">
+      <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+    </div>
+    <!-- Title -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="flex gap-2 mb-2"><span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-full">🌿 Eco</span><span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-full">Biển đảo</span></div>
+          <h1 class="text-2xl font-extrabold text-slate-800 mb-1">Phú Quốc Eco Discovery 4N3Đ</h1>
+          <p class="text-slate-400 text-sm">📍 Phú Quốc, Kiên Giang · 4 ngày 3 đêm · Max 20 khách</p>
+        </div>
+        <div class="text-right shrink-0"><div class="text-2xl font-extrabold text-emerald-700">4.200.000₫</div><div class="text-xs text-slate-400">/người</div><div class="text-xs text-emerald-600 font-semibold mt-1">+180 GreenPoints</div></div>
+      </div>
+      <div class="flex gap-4 mt-4 pt-4 border-t border-slate-100 text-sm">
+        <div class="flex items-center gap-1.5"><span class="text-amber-400">⭐</span><span class="font-semibold">4.9</span><span class="text-slate-400">(128 đánh giá)</span></div>
+        <div class="flex items-center gap-1.5"><span class="text-slate-400">👥</span><span class="font-medium">18/20 chỗ</span><span class="text-red-500 text-xs">(còn 2 chỗ!)</span></div>
+        <div class="flex items-center gap-1.5"><span class="text-slate-400">🗓️</span><span class="font-medium">12/07/2025</span></div>
+      </div>
+    </div>
+    <!-- Tabs -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="border-b border-slate-100 px-4 pt-3 flex gap-1">
+        <button onclick="switchTab(0)" class="tab-btn active" id="tb0">Lịch trình</button>
+        <button onclick="switchTab(1)" class="tab-btn" id="tb1">Dịch vụ</button>
+        <button onclick="switchTab(2)" class="tab-btn" id="tb2">🌿 Eco</button>
+        <button onclick="switchTab(3)" class="tab-btn" id="tb3">Đánh giá</button>
+      </div>
+      <!-- Itinerary tab -->
+      <div id="tp0" class="tab-panel active p-5 space-y-4">
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <div class="bg-emerald-50 px-4 py-3 flex items-center gap-3"><span class="w-7 h-7 bg-emerald-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span><h4 class="font-semibold">Ngày 1 — HCM → Phú Quốc · Đón khách</h4></div>
+          <div class="px-4 py-3 text-sm text-slate-600 space-y-1.5"><p>🛫 07:00 Bay từ HCM · 🚌 09:30 Xe đón sân bay</p><p>🏨 12:00 Nhận phòng eco-resort · 🌊 14:00 Tham quan bãi Sao</p><p>🍽️ 19:00 Tối hải sản địa phương — zero-waste packaging</p></div>
+        </div>
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <div class="bg-teal-50 px-4 py-3 flex items-center gap-3"><span class="w-7 h-7 bg-teal-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span><h4 class="font-semibold">Ngày 2 — Snorkeling · Rạn san hô</h4></div>
+          <div class="px-4 py-3 text-sm text-slate-600 space-y-1.5"><p>🐠 06:30 Khởi hành thuyền · 🤿 08:00 Snorkeling Hòn Mây Rút</p><p>🌱 13:00 Workshop trồng san hô (+50 GreenPoints)</p><p>♻️ Chiều: Dọn vệ sinh bãi biển cùng cộng đồng</p></div>
+        </div>
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <div class="bg-amber-50 px-4 py-3 flex items-center gap-3"><span class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span><h4 class="font-semibold">Ngày 3 — Rừng nguyên sinh Phú Quốc</h4></div>
+          <div class="px-4 py-3 text-sm text-slate-600 space-y-1.5"><p>🌳 07:00 Trekking rừng với HDV eco-certified</p><p>🐦 10:00 Quan sát chim quý (binoculars cung cấp)</p><p>🍃 14:00 Trải nghiệm y học cổ truyền từ thảo mộc rừng</p></div>
+        </div>
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3"><span class="w-7 h-7 bg-rose-500 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span><h4 class="font-semibold">Ngày 4 — Zero-waste Camp · Bay về</h4></div>
+          <div class="px-4 py-3 text-sm text-slate-600 space-y-1.5"><p>🏕️ Sáng: Zero-waste breakfast · Đóng gói đồ</p><p>🛫 14:00 Ra sân bay · Bay về HCM 15:30</p></div>
+        </div>
+      </div>
+      <!-- Services tab -->
+      <div id="tp1" class="tab-panel p-5">
+        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+          <div><p class="font-semibold text-emerald-700 mb-2">✅ Bao gồm</p><ul class="space-y-1.5 text-slate-600"><li>• Vé máy bay khứ hồi HCM – PQC</li><li>• 3 đêm eco-resort 3★</li><li>• Tất cả bữa ăn (theo tour)</li><li>• Hướng dẫn viên eco-certified</li><li>• Dụng cụ snorkeling</li><li>• Xe đón/tiễn sân bay</li><li>• Bảo hiểm du lịch 200 triệu</li></ul></div>
+          <div><p class="font-semibold text-rose-500 mb-2">❌ Không bao gồm</p><ul class="space-y-1.5 text-slate-600"><li>• Chi tiêu cá nhân</li><li>• Đồ uống ngoài bữa ăn</li><li>• Phí hành lý vượt mức</li><li>• Tip hướng dẫn viên</li></ul></div>
+        </div>
+      </div>
+      <!-- Eco tab -->
+      <div id="tp2" class="tab-panel p-5">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-4"><p class="font-semibold text-emerald-800 mb-2">🌿 Cam kết Eco của tour này</p><p class="text-sm text-emerald-700">Tour đạt chứng nhận EcoTour Level 2 với các cam kết giảm thiểu tác động môi trường và hỗ trợ cộng đồng địa phương.</p></div>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-start gap-3 p-3 bg-white border border-slate-200 rounded-lg"><span class="text-xl">♻️</span><div><p class="font-medium">Zero-waste packaging</p><p class="text-slate-400 text-xs">Tất cả bữa ăn sử dụng đồ đựng tái sử dụng hoặc phân hủy sinh học</p></div><span class="ml-auto text-xs font-bold text-emerald-600">+30 GP</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white border border-slate-200 rounded-lg"><span class="text-xl">🌱</span><div><p class="font-medium">Trồng san hô</p><p class="text-slate-400 text-xs">Workshop trồng san hô tại rạn Hòn Mây Rút</p></div><span class="ml-auto text-xs font-bold text-emerald-600">+50 GP</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white border border-slate-200 rounded-lg"><span class="text-xl">🚿</span><div><p class="font-medium">Tiết kiệm nước</p><p class="text-slate-400 text-xs">Eco-resort cam kết giảm 40% sử dụng nước so với tiêu chuẩn</p></div><span class="ml-auto text-xs font-bold text-emerald-600">+20 GP</span></div>
+          <div class="flex items-start gap-3 p-3 bg-white border border-slate-200 rounded-lg"><span class="text-xl">🏡</span><div><p class="font-medium">Cộng đồng địa phương</p><p class="text-slate-400 text-xs">80% nhân viên và thực phẩm từ người dân Phú Quốc</p></div><span class="ml-auto text-xs font-bold text-emerald-600">+80 GP</span></div>
+        </div>
+      </div>
+      <!-- Reviews tab -->
+      <div id="tp3" class="tab-panel p-5 space-y-4">
+        <div class="flex items-center gap-5 p-4 bg-emerald-50 rounded-xl"><div class="text-5xl font-extrabold text-emerald-700">4.9</div><div><div class="text-amber-400 text-lg">⭐⭐⭐⭐⭐</div><p class="text-sm text-slate-500">128 đánh giá · 96% hài lòng</p></div></div>
+        <div class="space-y-3">
+          <div class="p-4 border border-slate-200 rounded-xl"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs">NA</div><span class="text-sm font-semibold">Nguyễn Anh T.</span></div><span class="text-amber-400 text-xs">⭐⭐⭐⭐⭐</span></div><p class="text-sm text-slate-600">"Tuyệt vời! HDV rất nhiệt tình, phần trồng san hô là highlight. Sẽ quay lại!"</p><p class="text-xs text-slate-400 mt-2">05/07/2025</p></div>
+          <div class="p-4 border border-slate-200 rounded-xl"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xs">MP</div><span class="text-sm font-semibold">Minh P.</span></div><span class="text-amber-400 text-xs">⭐⭐⭐⭐⭐</span></div><p class="text-sm text-slate-600">"Con tôi (9 tuổi) rất thích phần dọn bãi biển. Nhà hàng zero-waste cũng ngon bất ngờ."</p><p class="text-xs text-slate-400 mt-2">28/06/2025</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking widget (sticky) -->
+  <div class="lg:w-80 shrink-0">
+    <div class="sticky top-20 bg-white rounded-2xl border border-slate-200 shadow-lg p-5 space-y-4">
+      <div class="flex items-baseline gap-1"><span class="text-2xl font-extrabold text-emerald-700">4.200.000₫</span><span class="text-sm text-slate-400">/người</span></div>
+      <div class="text-xs text-emerald-600 font-semibold bg-emerald-50 rounded-lg px-3 py-2">🌿 Tích +180 GreenPoints khi đặt tour này</div>
+      <!-- Date -->
+      <div><label class="text-xs font-semibold text-slate-500 mb-1 block">Ngày khởi hành</label>
+        <select class="w-full border border-slate-200 rounded-lg text-sm px-3 py-2.5 outline-none focus:border-emerald-400">
+          <option>12/07/2025 (còn 2 chỗ) 🔴</option>
+          <option>19/07/2025 (còn 8 chỗ)</option>
+          <option>26/07/2025 (còn 15 chỗ)</option>
+        </select>
+      </div>
+      <!-- Passengers -->
+      <div><label class="text-xs font-semibold text-slate-500 mb-1 block">Số khách</label>
+        <div class="flex items-center gap-3 border border-slate-200 rounded-lg px-3 py-2"><button class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-lg flex items-center justify-center">−</button><span class="flex-1 text-center font-semibold text-slate-800">2 người lớn</span><button class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-lg flex items-center justify-center">+</button></div>
+      </div>
+      <!-- Price breakdown -->
+      <div class="bg-slate-50 rounded-xl p-3 space-y-1.5 text-sm">
+        <div class="flex justify-between"><span class="text-slate-500">4.200.000₫ × 2</span><span class="font-medium">8.400.000₫</span></div>
+        <div class="flex justify-between text-emerald-600"><span>Giảm voucher ECO20</span><span>− 840.000₫</span></div>
+        <div class="h-px bg-slate-200 my-1"></div>
+        <div class="flex justify-between font-bold text-slate-800"><span>Tổng cộng</span><span>7.560.000₫</span></div>
+      </div>
+      <a href="booking-flow.html" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm">Đặt ngay <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+      <p class="text-xs text-slate-400 text-center">Miễn phí hủy trước 72h khởi hành</p>
+    </div>
+  </div>
+</div>
+<script>
+function switchTab(n){
+  for(let i=0;i<4;i++){document.getElementById('tb'+i).classList.remove('active');document.getElementById('tp'+i).classList.remove('active');}
+  document.getElementById('tb'+n).classList.add('active');document.getElementById('tp'+n).classList.add('active');
+}
+</script>
+</body>
+</html>

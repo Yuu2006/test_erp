@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quyết toán — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}.na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <p class="ns">Tài chính</p>
+    <a href="incident-log.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Sự cố<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-rose-500 text-white rounded-full text-xs font-bold px-1">3</span></a>
+    <a href="expenses.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"/></svg>Chi phí</a>
+    <a href="settlement.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg>Quyết toán</a>
+    <a href="reports.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Báo cáo</a>
+    <a href="users.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Người dùng</a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <div><h1 class="font-bold text-slate-800">Quyết toán Tour</h1><p class="text-xs text-slate-400">4 tour chờ quyết toán · 18 đã hoàn thành</p></div>
+    <div class="ml-auto flex gap-2">
+      <select class="bg-slate-100 text-sm rounded-lg px-3 py-1.5 border-0 text-slate-600 outline-none cursor-pointer"><option>Tháng 07/2025</option><option>Tháng 06/2025</option></select>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6 space-y-5">
+    <!-- Summary KPIs -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm"><p class="text-xs text-slate-500">Tổng doanh thu</p><p class="text-xl font-bold text-slate-800 mt-1">1.84 tỷ₫</p></div>
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm"><p class="text-xs text-slate-500">Tổng chi phí</p><p class="text-xl font-bold text-slate-800 mt-1">1.41 tỷ₫</p></div>
+      <div class="bg-white rounded-xl p-4 border border-emerald-200 bg-emerald-50 shadow-sm"><p class="text-xs text-emerald-600">Lợi nhuận</p><p class="text-xl font-bold text-emerald-700 mt-1">430tr₫</p></div>
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm"><p class="text-xs text-slate-500">Biên lợi nhuận TB</p><p class="text-xl font-bold text-slate-800 mt-1">23.4%</p></div>
+    </div>
+
+    <!-- Pending settlements -->
+    <div class="space-y-3">
+      <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide">Chờ quyết toán</h3>
+
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-start justify-between flex-wrap gap-3">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-slate-800 text-base">Phú Quốc Biển Xanh</span>
+              <span class="font-mono text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded">PQE-2507-01</span>
+              <span class="text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">Chờ duyệt</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1.5">04/07 – 07/07/2025 · 22 khách · HDV: Nguyễn Trọng Hùng</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-4 text-center">
+          <div class="bg-slate-50 rounded-lg py-3">
+            <p class="text-xs text-slate-500">Doanh thu</p>
+            <p class="font-bold text-slate-800 mt-0.5">126,500,000₫</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg py-3">
+            <p class="text-xs text-slate-500">Chi phí</p>
+            <p class="font-bold text-slate-800 mt-0.5">89,400,000₫</p>
+          </div>
+          <div class="bg-emerald-50 rounded-lg py-3 border border-emerald-200">
+            <p class="text-xs text-emerald-600">Lợi nhuận</p>
+            <p class="font-bold text-emerald-700 mt-0.5">37,100,000₫</p>
+            <p class="text-xs text-emerald-500 mt-0.5">29.3%</p>
+          </div>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <button class="flex-1 text-sm font-semibold bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl transition">✓ Phê duyệt quyết toán</button>
+          <button class="px-4 text-sm font-medium text-slate-600 border border-slate-300 hover:bg-slate-50 rounded-xl transition">Xem chi tiết</button>
+          <button class="px-4 text-sm font-medium text-rose-600 border border-rose-200 hover:bg-rose-50 rounded-xl transition">Từ chối</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <div class="flex items-start justify-between flex-wrap gap-3">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-slate-800 text-base">Hội An Di Sản</span>
+              <span class="font-mono text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded">HOI-2507-02</span>
+              <span class="text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">Chờ duyệt</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1.5">05/07 – 07/07/2025 · 14 khách</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mt-4 text-center">
+          <div class="bg-slate-50 rounded-lg py-3"><p class="text-xs text-slate-500">Doanh thu</p><p class="font-bold text-slate-800 mt-0.5">72,800,000₫</p></div>
+          <div class="bg-slate-50 rounded-lg py-3"><p class="text-xs text-slate-500">Chi phí</p><p class="font-bold text-slate-800 mt-0.5">55,200,000₫</p></div>
+          <div class="bg-emerald-50 rounded-lg py-3 border border-emerald-200"><p class="text-xs text-emerald-600">Lợi nhuận</p><p class="font-bold text-emerald-700 mt-0.5">17,600,000₫</p><p class="text-xs text-emerald-500 mt-0.5">24.2%</p></div>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <button class="flex-1 text-sm font-semibold bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl transition">✓ Phê duyệt quyết toán</button>
+          <button class="px-4 text-sm font-medium text-slate-600 border border-slate-300 hover:bg-slate-50 rounded-xl transition">Xem chi tiết</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completed history table -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+        <h3 class="font-bold text-slate-800">Đã quyết toán (07/2025)</h3>
+        <button class="text-xs text-slate-500 border border-slate-200 hover:bg-slate-50 px-3 py-1 rounded-lg">Xuất Excel</button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-50 border-b border-slate-200"><th class="text-left px-5 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Tour</th><th class="text-right px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Doanh thu</th><th class="text-right px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Chi phí</th><th class="text-right px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Lợi nhuận</th><th class="text-right px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Biên</th><th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Ngày duyệt</th></tr></thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="hover:bg-slate-50"><td class="px-5 py-3 font-medium text-slate-700">Ninh Hải Nhật Bình · NHI-2506-08</td><td class="px-4 py-3 text-right text-slate-700">108,200,000₫</td><td class="px-4 py-3 text-right text-slate-700">82,400,000₫</td><td class="px-4 py-3 text-right font-bold text-emerald-600">25,800,000₫</td><td class="px-4 py-3 text-right font-semibold text-emerald-600">23.8%</td><td class="px-4 py-3 text-xs text-slate-400">30/06</td></tr>
+            <tr class="hover:bg-slate-50"><td class="px-5 py-3 font-medium text-slate-700">Sa Pa Sương Mù · SP-2506-05</td><td class="px-4 py-3 text-right text-slate-700">68,400,000₫</td><td class="px-4 py-3 text-right text-slate-700">52,100,000₫</td><td class="px-4 py-3 text-right font-bold text-emerald-600">16,300,000₫</td><td class="px-4 py-3 text-right font-semibold text-emerald-600">23.8%</td><td class="px-4 py-3 text-xs text-slate-400">28/06</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

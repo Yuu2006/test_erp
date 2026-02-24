@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ĐT-2506-0034 — Chi tiết đặt tour — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <a href="digital-passport.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"/></svg>Hộ chiếu số</a>
+    <a href="vouchers.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>Voucher</a>
+    <p class="ns">Sản phẩm</p>
+    <a href="tour-templates.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="tour-instances.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <a href="bookings.html" class="text-slate-400 hover:text-slate-600">Đặt tour</a>
+      <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-700 font-medium">ĐT-2506-0034</span>
+    </nav>
+    <div class="ml-auto flex gap-2">
+      <button class="px-3 py-2 text-sm border border-slate-200 rounded-lg hover:bg-slate-50 font-medium text-slate-600">Gửi Email</button>
+      <button class="px-3 py-2 text-sm border border-rose-200 text-rose-600 rounded-lg hover:bg-rose-50 font-medium">Hủy đơn</button>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6">
+    <div class="flex flex-col xl:flex-row gap-6">
+      <!-- Left: Main content -->
+      <div class="flex-1 space-y-5">
+        <!-- Booking header -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+          <div class="flex items-start justify-between flex-wrap gap-4">
+            <div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <span class="font-mono text-sm font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">ĐT-2506-0034</span>
+                <span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Confirmed</span>
+                <span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Đã thanh toán</span>
+              </div>
+              <div class="flex items-center gap-3 mt-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg">LT</div>
+                <div>
+                  <p class="font-bold text-slate-800 text-lg">Lê Thị Mai</p>
+                  <p class="text-sm text-slate-500 flex items-center gap-3">
+                    <span>📞 0987 654 321</span>
+                    <span>✉️ le.mai@gmail.com</span>
+                  </p>
+                </div>
+                <a href="digital-passport.html" class="ml-4 text-xs bg-teal-100 hover:bg-teal-200 text-teal-700 px-3 py-1.5 rounded-lg font-medium">Xem hộ chiếu số</a>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">Đặt ngày 12/06/2025</p>
+              <p class="text-xs text-slate-400 mt-1">Kênh: <span class="font-medium text-slate-600">Website</span></p>
+              <div class="flex items-center gap-1.5 mt-2 justify-end">
+                <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-medium">🌿 350 GreenPoints</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking details table -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+          <h3 class="font-bold text-slate-800 mb-4">Thông tin đặt tour</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 text-sm">
+            <div><p class="text-xs text-slate-400 mb-1">Tour</p><p class="font-semibold text-slate-800">Phú Quốc Biển Xanh Eco</p></div>
+            <div><p class="text-xs text-slate-400 mb-1">Mã đợt</p><a href="tour-instance-detail.html" class="font-semibold text-emerald-600 hover:underline font-mono">PQE-2507-02</a></div>
+            <div><p class="text-xs text-slate-400 mb-1">Ngày khởi hành</p><p class="font-semibold text-slate-800">05/07/2025</p></div>
+            <div><p class="text-xs text-slate-400 mb-1">Ngày về</p><p class="font-semibold text-slate-800">08/07/2025</p></div>
+            <div><p class="text-xs text-slate-400 mb-1">Số HK</p><p class="font-semibold text-slate-800">4 NL + 1 TE</p></div>
+            <div><p class="text-xs text-slate-400 mb-1">Điểm đón</p><p class="font-semibold text-slate-800">Sân bay Tân Sơn Nhất</p></div>
+          </div>
+        </div>
+
+        <!-- Passenger list -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+          <h3 class="font-bold text-slate-800 mb-4">Danh sách hành khách</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-slate-50 border-b border-slate-200">
+                <tr>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">#</th>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">Họ tên</th>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">Ngày sinh</th>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">CCCD / HC</th>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">Loại vé</th>
+                  <th class="text-left px-3 py-2 text-xs font-semibold text-slate-400">Đơn giá</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr><td class="px-3 py-2 text-slate-400">1</td><td class="px-3 py-2 font-medium text-slate-800">Lê Thị Mai <span class="text-xs text-emerald-600">(Trưởng đoàn)</span></td><td class="px-3 py-2 text-slate-500">08/08/1988</td><td class="px-3 py-2 font-mono text-xs text-slate-500">001088045678</td><td class="px-3 py-2"><span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">NL</span></td><td class="px-3 py-2 font-semibold text-slate-700">3,450,000₫</td></tr>
+                <tr><td class="px-3 py-2 text-slate-400">2</td><td class="px-3 py-2 font-medium text-slate-800">Trần Minh Hoàng</td><td class="px-3 py-2 text-slate-500">14/02/1985</td><td class="px-3 py-2 font-mono text-xs text-slate-500">079085034512</td><td class="px-3 py-2"><span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">NL</span></td><td class="px-3 py-2 font-semibold text-slate-700">3,450,000₫</td></tr>
+                <tr><td class="px-3 py-2 text-slate-400">3</td><td class="px-3 py-2 font-medium text-slate-800">Lê Hoàng Phúc</td><td class="px-3 py-2 text-slate-500">22/11/1990</td><td class="px-3 py-2 font-mono text-xs text-slate-500">036090078234</td><td class="px-3 py-2"><span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">NL</span></td><td class="px-3 py-2 font-semibold text-slate-700">3,450,000₫</td></tr>
+                <tr><td class="px-3 py-2 text-slate-400">4</td><td class="px-3 py-2 font-medium text-slate-800">Trần Ngọc Anh</td><td class="px-3 py-2 text-slate-500">05/06/1991</td><td class="px-3 py-2 font-mono text-xs text-slate-500">001091056789</td><td class="px-3 py-2"><span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">NL</span></td><td class="px-3 py-2 font-semibold text-slate-700">3,450,000₫</td></tr>
+                <tr><td class="px-3 py-2 text-slate-400">5</td><td class="px-3 py-2 font-medium text-slate-800">Lê Minh Khôi</td><td class="px-3 py-2 text-slate-500">18/04/2017</td><td class="px-3 py-2 text-slate-400 text-xs">—</td><td class="px-3 py-2"><span class="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full">TE</span></td><td class="px-3 py-2 font-semibold text-slate-700">1,200,000₫</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Payment timeline -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+          <h3 class="font-bold text-slate-800 mb-4">Lịch sử thanh toán</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0 ring-4 ring-emerald-100"></div>
+              <div class="flex-1 flex items-center justify-between">
+                <div><p class="text-sm font-medium text-slate-800">Thanh toán đầy đủ qua VNPay</p><p class="text-xs text-slate-400 mt-0.5">12/06/2025 09:14 • MÃ: VNP-20250612-9384</p></div>
+                <span class="font-bold text-emerald-600 text-sm">+14,900,000₫</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Sticky actions -->
+      <div class="xl:w-80 space-y-4 xl:sticky xl:top-20 xl:self-start">
+        <!-- Tour summary -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="h-28 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-end p-4">
+            <div>
+              <p class="text-white font-bold">Phú Quốc Biển Xanh Eco</p>
+              <p class="text-blue-100 text-xs mt-1">05/07 – 08/07/2025 · 4N3Đ</p>
+            </div>
+          </div>
+          <div class="p-4 space-y-2 text-sm">
+            <div class="flex justify-between"><span class="text-slate-500">4 NL × 3,450,000₫</span><span class="font-semibold text-slate-700">13,800,000₫</span></div>
+            <div class="flex justify-between"><span class="text-slate-500">1 TE × 1,200,000₫</span><span class="font-semibold text-slate-700">1,200,000₫</span></div>
+            <div class="flex justify-between pt-2 border-t border-slate-100"><span class="font-semibold text-slate-700">Voucher ECO20</span><span class="font-semibold text-emerald-600">-100,000₫</span></div>
+            <div class="flex justify-between pt-2 border-t border-slate-200"><span class="font-bold text-slate-800">Tổng cộng</span><span class="font-bold text-emerald-600 text-lg">14,900,000₫</span></div>
+          </div>
+        </div>
+
+        <!-- Voucher chip -->
+        <div class="bg-teal-50 border border-teal-200 rounded-xl p-4 flex items-center gap-3">
+          <svg class="w-8 h-8 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+          <div><p class="font-semibold text-teal-800 text-sm">ECO20 đã áp dụng</p><p class="text-xs text-teal-600">Giảm 100,000₫ cho đơn ≥ 5tr</p></div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-2">
+          <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors">Gửi e-ticket</button>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded-lg transition-colors">Thêm dịch vụ</button>
+          <button class="w-full border border-amber-200 bg-amber-50 hover:bg-amber-100 text-amber-700 text-sm font-medium py-2.5 rounded-lg transition-colors">Yêu cầu hoàn tiền</button>
+          <button class="w-full text-rose-500 hover:bg-rose-50 text-sm font-medium py-2.5 rounded-lg transition-colors">Hủy đơn</button>
+        </div>
+
+        <!-- Notes -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h4 class="font-semibold text-slate-700 text-sm mb-2">Ghi chú nội bộ</h4>
+          <textarea rows="4" placeholder="Thêm ghi chú..." class="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 outline-none resize-none focus:ring-2 focus:ring-emerald-400 text-slate-700 placeholder-slate-400"></textarea>
+          <button class="mt-2 w-full bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium py-2 rounded-lg">Lưu ghi chú</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

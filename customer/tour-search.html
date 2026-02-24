@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tìm tour — EcoTour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-slate-100 text-slate-700">
+
+<!-- Nav -->
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-5 flex items-center gap-6 h-14">
+    <a href="home.html" class="flex items-center gap-2 mr-3">
+      <div class="w-7 h-7 bg-emerald-500 rounded-lg flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/></svg></div>
+      <span class="font-extrabold text-slate-800 text-sm">EcoTour</span>
+    </a>
+    <div class="flex-1 flex items-center bg-slate-100 rounded-lg px-3 py-2 gap-2 max-w-lg">
+      <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
+      <input class="bg-transparent text-sm w-full outline-none placeholder-slate-400" placeholder="Tìm điểm đến, tour..." value="Phú Quốc" />
+    </div>
+    <a href="profile.html" class="ml-auto w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">LM</a>
+  </div>
+</nav>
+
+<!-- Sort bar -->
+<div class="bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-5 flex items-center gap-3 py-2.5">
+    <span class="text-xs text-slate-400">23 kết quả</span>
+    <div class="w-px h-4 bg-slate-200"></div>
+    <button class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200">🌿 Eco trước</button>
+    <button class="text-xs font-medium text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 hover:bg-slate-50">Giá tăng dần</button>
+    <button class="text-xs font-medium text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 hover:bg-slate-50">Đánh giá cao</button>
+    <button class="text-xs font-medium text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 hover:bg-slate-50">Khởi hành sớm</button>
+  </div>
+</div>
+
+<div class="max-w-6xl mx-auto px-5 py-6 flex gap-5">
+  <!-- Filter sidebar -->
+  <aside class="w-64 shrink-0 space-y-4 hidden lg:block">
+    <!-- Region -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+      <h4 class="font-semibold text-slate-700 text-sm mb-3">Vùng / Tỉnh</h4>
+      <div class="space-y-2">
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" checked class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Miền Nam</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Miền Trung</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Miền Bắc</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Nước ngoài</span></label>
+      </div>
+    </div>
+    <!-- Duration -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+      <h4 class="font-semibold text-slate-700 text-sm mb-3">Thời gian</h4>
+      <div class="space-y-2">
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="radio" name="dur" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">1 – 2 ngày</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="radio" name="dur" checked class="accent-emerald-500 w-4 h-4" /><span class="text-sm">3 – 5 ngày</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="radio" name="dur" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">6 – 10 ngày</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="radio" name="dur" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Trên 10 ngày</span></label>
+      </div>
+    </div>
+    <!-- Price range -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+      <h4 class="font-semibold text-slate-700 text-sm mb-3">Giá / người (₫)</h4>
+      <input type="range" min="1000000" max="20000000" value="10000000" class="w-full accent-emerald-500" />
+      <div class="flex justify-between text-xs text-slate-400 mt-1"><span>1tr</span><span>10tr</span><span>20tr</span></div>
+    </div>
+    <!-- Eco filter -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+      <h4 class="font-semibold text-slate-700 text-sm mb-3">🌿 Eco Filter</h4>
+      <div class="space-y-2">
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" checked class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Có EcoAction</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Zero-waste</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">HDV Eco cert</span></label>
+        <label class="flex items-center gap-2.5 cursor-pointer"><input type="checkbox" class="accent-emerald-500 w-4 h-4" /><span class="text-sm">Cộng đồng địa phương</span></label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Tour grid -->
+  <div class="flex-1 grid sm:grid-cols-2 xl:grid-cols-3 gap-4 content-start">
+    <!-- Tour card template × 6 -->
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-teal-400 to-emerald-600">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">🌿 Eco</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+180 GP</div>
+      </div>
+      <div class="p-3.5">
+        <div class="flex items-start justify-between gap-2 mb-1"><h3 class="font-semibold text-slate-800 text-sm leading-tight group-hover:text-emerald-700">Phú Quốc Eco Discovery 4N3Đ</h3></div>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Phú Quốc · Khởi hành: 12/07</p>
+        <div class="flex items-center justify-between">
+          <span class="text-base font-extrabold text-emerald-700">4.200.000₫</span>
+          <span class="text-xs text-slate-400">⭐ 4.9</span>
+        </div>
+      </div>
+    </a>
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-amber-400 to-orange-500">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">🏮 Văn hóa</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+120 GP</div>
+      </div>
+      <div class="p-3.5">
+        <h3 class="font-semibold text-slate-800 text-sm leading-tight mb-1 group-hover:text-emerald-700">Hội An Heritage 3N2Đ</h3>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Hội An · Khởi hành: 15/07</p>
+        <div class="flex items-center justify-between"><span class="text-base font-extrabold text-emerald-700">3.100.000₫</span><span class="text-xs text-slate-400">⭐ 4.8</span></div>
+      </div>
+    </a>
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-blue-400 to-indigo-600">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">🏔️ Trekking</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+200 GP</div>
+      </div>
+      <div class="p-3.5">
+        <h3 class="font-semibold text-slate-800 text-sm leading-tight mb-1 group-hover:text-emerald-700">Sapa Trekking Fansipan 4N3Đ</h3>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Sapa · Khởi hành: 20/07</p>
+        <div class="flex items-center justify-between"><span class="text-base font-extrabold text-emerald-700">5.500.000₫</span><span class="text-xs text-slate-400">⭐ 4.9</span></div>
+      </div>
+    </a>
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-rose-400 to-pink-600">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-rose-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">🌸 Đảo</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+150 GP</div>
+      </div>
+      <div class="p-3.5">
+        <h3 class="font-semibold text-slate-800 text-sm leading-tight mb-1 group-hover:text-emerald-700">Côn Đảo Diving 3N2Đ</h3>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Côn Đảo · Khởi hành: 18/07</p>
+        <div class="flex items-center justify-between"><span class="text-base font-extrabold text-emerald-700">6.200.000₫</span><span class="text-xs text-slate-400">⭐ 4.7</span></div>
+      </div>
+    </a>
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-violet-400 to-purple-600">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-violet-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">🌺 Rừng</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+240 GP</div>
+      </div>
+      <div class="p-3.5">
+        <h3 class="font-semibold text-slate-800 text-sm leading-tight mb-1 group-hover:text-emerald-700">Cát Tiên Eco Camp 2N1Đ</h3>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Cát Tiên · Khởi hành: 25/07</p>
+        <div class="flex items-center justify-between"><span class="text-base font-extrabold text-emerald-700">2.800.000₫</span><span class="text-xs text-slate-400">⭐ 4.8</span></div>
+      </div>
+    </a>
+    <a href="tour-detail.html" class="group bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <div class="relative h-40 bg-gradient-to-br from-cyan-400 to-sky-600">
+        <div class="absolute top-3 left-3 flex gap-1.5"><span class="bg-sky-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">⛵ Biển</span></div>
+        <div class="absolute bottom-3 right-3 bg-black/40 text-white text-xs font-medium px-2 py-0.5 rounded-full">+160 GP</div>
+      </div>
+      <div class="p-3.5">
+        <h3 class="font-semibold text-slate-800 text-sm leading-tight mb-1 group-hover:text-emerald-700">Nha Trang Island Hopping 3N2Đ</h3>
+        <p class="text-xs text-slate-400 mb-2.5">📍 Nha Trang · Khởi hành: 30/07</p>
+        <div class="flex items-center justify-between"><span class="text-base font-extrabold text-emerald-700">3.500.000₫</span><span class="text-xs text-slate-400">⭐ 4.6</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xác nhận đặt tour — EcoTour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    @keyframes pop{0%{transform:scale(.5);opacity:0;}70%{transform:scale(1.15);}100%{transform:scale(1);opacity:1;}}
+    .pop{animation:pop .5s ease forwards;}
+    @keyframes dash{to{stroke-dashoffset:0;}}
+    .check-circle{stroke-dasharray:166;stroke-dashoffset:166;animation:dash .8s .3s ease forwards;}
+    .check-mark{stroke-dasharray:48;stroke-dashoffset:48;animation:dash .4s .9s ease forwards;}
+    /* Dashed border ticket */
+    .ticket{background:white;border-radius:16px;position:relative;}
+    .ticket::before,.ticket::after{content:'';position:absolute;width:24px;height:24px;background:#f1f5f9;border-radius:50%;top:50%;transform:translateY(-50%);}
+    .ticket::before{left:-12px;}.ticket::after{right:-12px;}
+  </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 to-teal-50 min-h-screen flex flex-col">
+
+<nav class="bg-white border-b border-slate-200">
+  <div class="max-w-xl mx-auto px-5 flex items-center h-14">
+    <a href="home.html" class="flex items-center gap-2"><div class="w-7 h-7 bg-emerald-500 rounded-lg flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"/></svg></div><span class="font-extrabold text-slate-800 text-sm">EcoTour</span></a>
+  </div>
+</nav>
+
+<div class="max-w-xl mx-auto px-5 py-10 space-y-6">
+  <!-- Success animation -->
+  <div class="text-center">
+    <div class="inline-flex items-center justify-center w-20 h-20 pop">
+      <svg viewBox="0 0 52 52" class="w-20 h-20">
+        <circle cx="26" cy="26" r="25" fill="none" stroke="#059669" stroke-width="2" class="check-circle"/>
+        <path fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 16-16" class="check-mark"/>
+      </svg>
+    </div>
+    <h1 class="text-2xl font-extrabold text-slate-800 mt-4">Đặt tour thành công! 🎉</h1>
+    <p class="text-slate-500 text-sm mt-2">Bạn đã đặt <strong>Phú Quốc Eco Discovery 4N3Đ</strong>.<br/>Email xác nhận đã gửi tới <strong>mai@example.com</strong></p>
+  </div>
+
+  <!-- E-ticket -->
+  <div class="ticket shadow-xl border border-slate-200 overflow-hidden">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-5">
+      <div class="flex items-center justify-between">
+        <div><p class="text-emerald-200 text-xs font-semibold mb-0.5">E-TICKET</p><h2 class="text-xl font-extrabold">Phú Quốc Eco Discovery</h2><p class="text-emerald-200 text-sm mt-0.5">4 Ngày 3 Đêm</p></div>
+        <div class="text-right"><p class="text-emerald-200 text-xs">Mã đặt tour</p><p class="font-extrabold text-lg font-mono">PQE-2507-03</p></div>
+      </div>
+    </div>
+    <!-- Dashed divider -->
+    <div class="relative px-5"><div class="border-t-2 border-dashed border-slate-200 my-0 py-0"></div></div>
+    <!-- Details -->
+    <div class="p-5 grid grid-cols-2 gap-4 text-sm">
+      <div><p class="text-xs text-slate-400 mb-0.5">Ngày khởi hành</p><p class="font-semibold">12/07/2025</p></div>
+      <div><p class="text-xs text-slate-400 mb-0.5">Ngày về</p><p class="font-semibold">15/07/2025</p></div>
+      <div><p class="text-xs text-slate-400 mb-0.5">Số khách</p><p class="font-semibold">2 người lớn</p></div>
+      <div><p class="text-xs text-slate-400 mb-0.5">Hướng dẫn viên</p><p class="font-semibold">Nguyễn Văn Hùng</p></div>
+      <div><p class="text-xs text-slate-400 mb-0.5">Điểm tập kết</p><p class="font-semibold">SB Tân Sơn Nhất (T1)</p></div>
+      <div><p class="text-xs text-slate-400 mb-0.5">GreenPoints tích</p><p class="font-semibold text-emerald-600">+180 GP (sau tour)</p></div>
+    </div>
+    <!-- Dashed divider 2 -->
+    <div class="relative px-5"><div class="border-t-2 border-dashed border-slate-200"></div></div>
+    <!-- Payment summary -->
+    <div class="p-5 flex items-center justify-between text-sm">
+      <div><p class="text-xs text-slate-400 mb-0.5">Tổng thanh toán</p><p class="text-xl font-extrabold text-slate-800">8.300.000₫</p><p class="text-xs text-emerald-600 mt-0.5">Đã áp dụng ECO20 −100k</p></div>
+      <!-- QR placeholder -->
+      <div class="w-20 h-20 border-2 border-slate-300 rounded-xl flex items-center justify-center bg-slate-50 text-slate-300">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="bg-slate-50 px-5 py-3 text-xs text-slate-400 border-t border-slate-200">Xuất trình mã QR này tại điểm tập kết · HDV sẽ quét khi check-in</div>
+  </div>
+
+  <!-- GreenPoints onboarding message -->
+  <div class="bg-emerald-600 text-white rounded-2xl p-5 flex items-center gap-4">
+    <span class="text-3xl">🌿</span>
+    <div class="flex-1"><p class="font-bold mb-0.5">+180 GreenPoints sẽ được cộng sau tour!</p><p class="text-emerald-200 text-xs">Hoàn thành EcoAction trên app để tích thêm điểm và đổi voucher hấp dẫn.</p></div>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex gap-3">
+    <a href="profile.html" class="flex-1 text-center border border-emerald-600 text-emerald-700 font-semibold py-3 rounded-xl text-sm hover:bg-emerald-50">Xem đặt tour</a>
+    <a href="home.html" class="flex-1 text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl text-sm">Về trang chủ</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hội An – Mỹ Sơn Di Sản — Tour mẫu — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    .accordion-content{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .accordion-content.open{max-height:2000px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<!-- Sidebar (same as tour-templates.html but na on Tour mẫu link) -->
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Tổng quan</p>
+    <a href="dashboard-manager.html" class="ni">
+      <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke-width="2"/></svg>Dashboard</a>
+    <p class="ns">Sản phẩm</p>
+    <a href="tour-templates.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="tour-instances.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+    <a href="eco-catalog.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>Danh mục xanh</a>
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <a href="vouchers.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>Voucher</a>
+    <p class="ns">Điều hành</p>
+    <a href="tour-assignment.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Điều động HDV</a>
+    <a href="incident-log.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Sự cố<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-rose-500 text-white rounded-full text-xs font-bold px-1">3</span></a>
+    <p class="ns">Tài chính</p>
+    <a href="reports.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Báo cáo</a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <a href="tour-templates.html" class="text-slate-400 hover:text-slate-600">Tour mẫu</a>
+      <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-700 font-medium">Hội An – Mỹ Sơn Di Sản</span>
+    </nav>
+    <div class="ml-auto flex items-center gap-2">
+      <button class="px-4 py-2 text-sm border border-slate-200 rounded-lg hover:bg-slate-50 font-medium text-slate-600">Xem trước</button>
+      <button class="px-4 py-2 text-sm bg-slate-200 rounded-lg hover:bg-slate-300 font-medium text-slate-700">Lưu nháp</button>
+      <button class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold">Xuất bản</button>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6">
+    <div class="flex flex-col xl:flex-row gap-6">
+      <!-- Left Column: Form -->
+      <div class="flex-1 space-y-5">
+        <!-- Status & eco badge -->
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full">
+            <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>Hoạt động
+          </span>
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold bg-teal-100 text-teal-700 px-3 py-1.5 rounded-full">🌿 Eco Certified</span>
+          <span class="text-sm text-slate-400">Cập nhật lần cuối: 12/06/2025 bởi Trần Thị B</span>
+        </div>
+
+        <!-- Thông tin cơ bản -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-4">
+          <h2 class="font-bold text-slate-800 text-base flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Thông tin cơ bản
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="md:col-span-2">
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Tên Tour</label>
+              <input type="text" value="Hội An – Mỹ Sơn Di Sản" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Số ngày</label>
+              <input type="number" value="3" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Số đêm</label>
+              <input type="number" value="2" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Điểm đến chính</label>
+              <select class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400">
+                <option selected>Hội An, Quảng Nam</option><option>Đà Nẵng</option><option>Huế</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Phương tiện</label>
+              <select class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400">
+                <option selected>Xe khách + Xe điện</option><option>Máy bay</option><option>Tàu hỏa</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Mô tả ngắn</label>
+              <textarea rows="3" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm text-slate-800 outline-none focus:ring-2 focus:ring-emerald-400 resize-none">Khám phá phố cổ Hội An, rừng dừa Bảy Mẫu và thánh địa Mỹ Sơn với chương trình du lịch bền vững, hỗ trợ cộng đồng địa phương.</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hành trình theo ngày -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+            <h2 class="font-bold text-slate-800 text-base flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Lịch trình hành trình
+            </h2>
+            <button class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Thêm ngày
+            </button>
+          </div>
+
+          <!-- Day 1 accordion (open) -->
+          <div class="border-b border-slate-100">
+            <button onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center gap-3 px-5 py-4 hover:bg-slate-50 transition-colors text-left">
+              <span class="flex-shrink-0 w-8 h-8 bg-emerald-600 text-white rounded-full text-sm font-bold flex items-center justify-center">1</span>
+              <div class="flex-1"><p class="font-semibold text-slate-800">Ngày 1 — Đón tại Đà Nẵng → Hội An</p><p class="text-xs text-slate-400 mt-0.5">4 hoạt động · Bữa: Trưa, Tối</p></div>
+              <svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content open">
+              <div class="px-5 pb-5 space-y-3">
+                <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
+                  <span class="flex-shrink-0 text-xs font-semibold bg-slate-200 text-slate-600 px-2 py-1 rounded">08:00</span>
+                  <div class="flex-1">
+                    <input type="text" value="Xe đón khách tại sân bay Đà Nẵng / khách sạn" class="w-full bg-transparent text-sm text-slate-800 outline-none font-medium border-b border-transparent focus:border-slate-300 pb-0.5" />
+                    <p class="text-xs text-slate-400 mt-1">Đón 20–25 khách • Xe 35 chỗ</p>
+                  </div>
+                  <button class="text-slate-300 hover:text-rose-400"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
+                  <span class="flex-shrink-0 text-xs font-semibold bg-slate-200 text-slate-600 px-2 py-1 rounded">10:30</span>
+                  <div class="flex-1">
+                    <input type="text" value="Tham quan Phố cổ Hội An – chụp ảnh Chùa Cầu, nhà cổ" class="w-full bg-transparent text-sm text-slate-800 outline-none font-medium border-b border-transparent focus:border-slate-300 pb-0.5" />
+                    <p class="text-xs text-slate-400 mt-1">Hướng dẫn viên tiếng Anh / Việt</p>
+                  </div>
+                  <button class="text-slate-300 hover:text-rose-400"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
+                  <span class="flex-shrink-0 text-xs font-semibold bg-amber-100 text-amber-600 px-2 py-1 rounded">12:00</span>
+                  <div class="flex-1">
+                    <input type="text" value="🍽 Trưa tại nhà hàng Mì Quảng truyền thống" class="w-full bg-transparent text-sm text-slate-800 outline-none font-medium border-b border-transparent focus:border-slate-300 pb-0.5" />
+                    <p class="text-xs text-slate-400 mt-1">Nguyên liệu địa phương • zero-plastic</p>
+                  </div>
+                  <button class="text-slate-300 hover:text-rose-400"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+                </div>
+                <button class="w-full text-sm text-emerald-600 hover:text-emerald-700 font-medium py-2 border-2 border-dashed border-emerald-200 hover:border-emerald-300 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Thêm hoạt động
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 accordion (closed) -->
+          <div class="border-b border-slate-100">
+            <button onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center gap-3 px-5 py-4 hover:bg-slate-50 transition-colors text-left">
+              <span class="flex-shrink-0 w-8 h-8 bg-slate-200 text-slate-600 rounded-full text-sm font-bold flex items-center justify-center">2</span>
+              <div class="flex-1"><p class="font-semibold text-slate-800">Ngày 2 — Rừng dừa Bảy Mẫu → Thánh địa Mỹ Sơn</p><p class="text-xs text-slate-400 mt-0.5">5 hoạt động · Bữa: Sáng, Trưa, Tối</p></div>
+              <svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content"><div class="px-5 pb-4 pt-2"><p class="text-sm text-slate-500 italic">Click để mở chi tiết ngày 2...</p></div></div>
+          </div>
+
+          <!-- Day 3 accordion (closed) -->
+          <div>
+            <button onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center gap-3 px-5 py-4 hover:bg-slate-50 transition-colors text-left">
+              <span class="flex-shrink-0 w-8 h-8 bg-slate-200 text-slate-600 rounded-full text-sm font-bold flex items-center justify-center">3</span>
+              <div class="flex-1"><p class="font-semibold text-slate-800">Ngày 3 — Mua sắm nghề thủ công → Tiễn sân bay</p><p class="text-xs text-slate-400 mt-0.5">3 hoạt động · Bữa: Sáng</p></div>
+              <svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content"><div class="px-5 pb-4 pt-2"><p class="text-sm text-slate-500 italic">Click để mở chi tiết ngày 3...</p></div></div>
+          </div>
+        </div>
+
+        <!-- Dịch vụ bao gồm -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+          <h2 class="font-bold text-slate-800 text-base mb-4">Dịch vụ bao gồm / Không bao gồm</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">✓ Bao gồm</p>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Xe đưa đón chuyên dụng</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Khách sạn 3–4 sao (2 đêm)</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Bữa ăn theo lịch trình</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Vé tham quan theo chương trình</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Hướng dẫn viên tiếng Việt/Anh</label>
+                <button class="text-xs text-emerald-600 hover:text-emerald-700 font-medium mt-1">+ Thêm mục</button>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-rose-500 uppercase tracking-wide mb-3">✗ Không bao gồm</p>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-rose-500" />Vé máy bay</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-rose-500" />Chi phí cá nhân</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-rose-500" />Bảo hiểm du lịch</label>
+                <button class="text-xs text-rose-500 hover:text-rose-600 font-medium mt-1">+ Thêm mục</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eco Rules -->
+        <div class="bg-white rounded-xl border border-teal-200 shadow-sm p-6">
+          <h2 class="font-bold text-teal-700 text-base mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            Quy tắc xanh (Eco Rules)
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-start gap-2 p-3 bg-teal-50 rounded-lg cursor-pointer hover:bg-teal-100 transition-colors">
+              <input type="checkbox" checked class="accent-teal-600 mt-0.5" />
+              <div><p class="text-sm font-medium text-teal-800">Không dùng nhựa 1 lần</p><p class="text-xs text-teal-600">+15 điểm xanh/khách</p></div>
+            </label>
+            <label class="flex items-start gap-2 p-3 bg-teal-50 rounded-lg cursor-pointer hover:bg-teal-100 transition-colors">
+              <input type="checkbox" checked class="accent-teal-600 mt-0.5" />
+              <div><p class="text-sm font-medium text-teal-800">Sử dụng xe điện</p><p class="text-xs text-teal-600">+20 điểm xanh/đoàn</p></div>
+            </label>
+            <label class="flex items-start gap-2 p-3 bg-teal-50 rounded-lg cursor-pointer hover:bg-teal-100 transition-colors">
+              <input type="checkbox" checked class="accent-teal-600 mt-0.5" />
+              <div><p class="text-sm font-medium text-teal-800">Hỗ trợ nghệ nhân địa phương</p><p class="text-xs text-teal-600">+30 điểm xanh/khách</p></div>
+            </label>
+            <label class="flex items-start gap-2 p-3 bg-teal-50 rounded-lg cursor-pointer hover:bg-teal-100 transition-colors">
+              <input type="checkbox" class="accent-teal-600 mt-0.5" />
+              <div><p class="text-sm font-medium text-teal-800">Trồng 1 cây/khách</p><p class="text-xs text-teal-600">+50 điểm xanh/khách</p></div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Sticky cost card -->
+      <div class="xl:w-80 space-y-4 xl:sticky xl:top-20 xl:self-start">
+        <!-- Pricing card -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Giá cơ sở
+          </h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-sm text-slate-600">Người lớn</span>
+              <div class="flex items-center gap-2"><input type="text" value="1,850,000" class="w-24 text-right border border-slate-200 rounded px-2 py-1 text-sm font-semibold text-slate-800 outline-none" /><span class="text-xs text-slate-400">₫</span></div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-sm text-slate-600">Trẻ em (5–11t)</span>
+              <div class="flex items-center gap-2"><input type="text" value="1,200,000" class="w-24 text-right border border-slate-200 rounded px-2 py-1 text-sm font-semibold text-slate-800 outline-none" /><span class="text-xs text-slate-400">₫</span></div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-sm text-slate-600">Trẻ em (&lt;5t)</span>
+              <div class="flex items-center gap-2"><input type="text" value="Miễn phí" class="w-24 text-right border border-slate-200 rounded px-2 py-1 text-sm font-semibold text-slate-800 outline-none" /><span class="text-xs text-slate-400">₫</span></div>
+            </div>
+          </div>
+          <div class="mt-4 p-3 bg-emerald-50 rounded-lg">
+            <p class="text-xs text-emerald-700 font-medium">Biên lợi nhuận mục tiêu</p>
+            <div class="flex items-center gap-2 mt-1">
+              <div class="flex-1 bg-emerald-200 rounded-full h-2"><div class="bg-emerald-600 h-2 rounded-full" style="width:28%"></div></div>
+              <span class="text-sm font-bold text-emerald-700">28%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contracted rates -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="font-bold text-slate-800 mb-3 text-sm">Giá nhà cung cấp (HĐ)</h3>
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs py-1.5 border-b border-slate-100">
+              <span class="text-slate-600">Khách sạn Ancient House</span>
+              <span class="font-semibold text-slate-800">450,000₫/đêm</span>
+            </div>
+            <div class="flex justify-between text-xs py-1.5 border-b border-slate-100">
+              <span class="text-slate-600">Vé tham quan Mỹ Sơn</span>
+              <span class="font-semibold text-slate-800">150,000₫/người</span>
+            </div>
+            <div class="flex justify-between text-xs py-1.5 border-b border-slate-100">
+              <span class="text-slate-600">Thuê xe điện Hội An</span>
+              <span class="font-semibold text-slate-800">80,000₫/người</span>
+            </div>
+            <div class="flex justify-between text-xs py-1.5 border-b border-slate-100">
+              <span class="text-slate-600">Bữa ăn (x5 bữa)</span>
+              <span class="font-semibold text-slate-800">250,000₫/người</span>
+            </div>
+            <button class="text-xs text-emerald-600 hover:text-emerald-700 font-medium">+ Thêm nhà cungcấp</button>
+          </div>
+          <div class="mt-3 pt-3 border-t border-slate-200">
+            <div class="flex justify-between"><span class="text-xs font-semibold text-slate-500">Tổng giá vốn TT</span><span class="text-sm font-bold text-slate-800">1,332,000₫</span></div>
+          </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-2">
+          <a href="tour-instances.html" class="w-full block text-center bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">Tạo đợt khởi hành</a>
+          <button class="w-full block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">Nhân bản Tour mẫu</button>
+          <button class="w-full block text-center text-rose-500 hover:bg-rose-50 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">Ngừng hoạt động</button>
+        </div>
+
+        <!-- Statistics -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="font-bold text-slate-800 mb-3 text-sm">Thống kê</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="text-center"><p class="text-2xl font-bold text-emerald-600">18</p><p class="text-xs text-slate-400">Đợt đã chạy</p></div>
+            <div class="text-center"><p class="text-2xl font-bold text-slate-800">342</p><p class="text-xs text-slate-400">Lượt khách</p></div>
+            <div class="text-center"><p class="text-2xl font-bold text-amber-500">4.9★</p><p class="text-xs text-slate-400">Đánh giá TB</p></div>
+            <div class="text-center"><p class="text-2xl font-bold text-teal-600">78%</p><p class="text-xs text-slate-400">Tỷ lệ lấp đầy</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

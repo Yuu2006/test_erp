@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đợt khởi hành — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Tổng quan</p>
+    <a href="dashboard-manager.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke-width="2"/></svg>Dashboard</a>
+    <p class="ns">Sản phẩm</p>
+    <a href="tour-templates.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="tour-instances.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+    <a href="eco-catalog.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>Danh mục xanh</a>
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <a href="vouchers.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>Voucher</a>
+    <p class="ns">Điều hành</p>
+    <a href="tour-assignment.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Điều động HDV</a>
+    <a href="incident-log.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Sự cố<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-rose-500 text-white rounded-full text-xs font-bold px-1">3</span></a>
+    <p class="ns">Tài chính</p>
+    <a href="settlement.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Quyết toán</a>
+    <a href="reports.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Báo cáo</a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <span class="text-slate-400">Sản phẩm</span>
+      <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-700 font-medium">Đợt khởi hành</span>
+    </nav>
+    <div class="ml-auto flex items-center gap-3">
+      <button class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        Tạo đợt mới
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6 space-y-5">
+    <div class="flex items-center justify-between">
+      <div><h1 class="text-xl font-bold text-slate-900">Đợt khởi hành</h1><p class="text-sm text-slate-400 mt-0.5">Quản lý lịch trình và sức chứa từng chuyến</p></div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-wrap items-center gap-3">
+      <div class="flex items-center gap-2 bg-slate-100 rounded-lg px-3 py-2 flex-1 min-w-48">
+        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
+        <input type="text" placeholder="Tìm mã đợt, tên tour..." class="bg-transparent text-sm outline-none w-full placeholder-slate-400 text-slate-700" />
+      </div>
+      <div class="flex items-center gap-2 border border-slate-200 rounded-lg px-3 py-2">
+        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <input type="date" value="2025-06-01" class="text-sm outline-none text-slate-700" />
+        <span class="text-slate-300">–</span>
+        <input type="date" value="2025-08-31" class="text-sm outline-none text-slate-700" />
+      </div>
+      <select class="border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white outline-none">
+        <option>Tất cả tour mẫu</option><option>Hội An – Mỹ Sơn</option><option>Phú Quốc Eco</option><option>Hạ Long Cruise</option>
+      </select>
+      <select class="border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white outline-none">
+        <option>Tất cả trạng thái</option><option>Đang mở bán</option><option>Sắp khởi hành</option><option>Đang vận hành</option><option>Hoàn thành</option><option>Đã hủy</option>
+      </select>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 text-center"><p class="text-2xl font-bold text-slate-800">42</p><p class="text-xs text-slate-400 mt-1">Tổng đợt</p></div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 text-center"><p class="text-2xl font-bold text-emerald-600">18</p><p class="text-xs text-slate-400 mt-1">Đang mở bán</p></div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 text-center"><p class="text-2xl font-bold text-amber-500">7</p><p class="text-xs text-slate-400 mt-1">Sắp KH tháng này</p></div>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 text-center"><p class="text-2xl font-bold text-teal-600">76%</p><p class="text-xs text-slate-400 mt-1">Lấp đầy TB</p></div>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 border-b border-slate-200">
+            <tr>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Mã đợt</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Tour mẫu</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Ngày KH</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Ngày về</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Giá động</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Sức chứa</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Trạng thái</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Phương tiện</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <!-- Row 1 — High fill -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-700">HAN-2506-01</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-800">Hội An – Mỹ Sơn Di Sản</td>
+              <td class="px-4 py-3.5 text-slate-600">15/06/2025</td>
+              <td class="px-4 py-3.5 text-slate-600">17/06/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-emerald-600">1,985,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:88%"></div></div>
+                  <span class="text-xs font-semibold text-emerald-600">22/25</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Đang mở bán</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-500">Xe khách + Xe điện</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <a href="tour-instance-detail.html" class="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1.5 rounded-lg font-medium">Chi tiết</a>
+                  <button class="text-xs bg-amber-100 hover:bg-amber-200 text-amber-700 px-2.5 py-1.5 rounded-lg font-medium">Chốt DS</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 2 — Medium fill -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-700">PQE-2507-02</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-800">Phú Quốc Biển Xanh Eco</td>
+              <td class="px-4 py-3.5 text-slate-600">05/07/2025</td>
+              <td class="px-4 py-3.5 text-slate-600">08/07/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-emerald-600">3,450,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-amber-400 h-2 rounded-full" style="width:40%"></div></div>
+                  <span class="text-xs font-semibold text-amber-600">12/30</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Đang mở bán</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-500">Máy bay</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <a href="tour-instance-detail.html" class="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1.5 rounded-lg font-medium">Chi tiết</a>
+                  <button class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1.5 rounded-lg font-medium">Khẩn cấp</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 3 — Low fill -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-700">STP-2507-01</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-800">Sapa Trekking Bản Làng</td>
+              <td class="px-4 py-3.5 text-slate-600">18/07/2025</td>
+              <td class="px-4 py-3.5 text-slate-600">22/07/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-emerald-600">4,200,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-rose-400 h-2 rounded-full" style="width:15%"></div></div>
+                  <span class="text-xs font-semibold text-rose-500">3/20</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Đang mở bán</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-500">Xe khách</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <a href="tour-instance-detail.html" class="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1.5 rounded-lg font-medium">Chi tiết</a>
+                  <button class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1.5 rounded-lg font-medium">Hủy đợt</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 4 — Upcoming -->
+            <tr class="hover:bg-slate-50 transition-colors bg-blue-50/30">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-700">HAN-2506-02</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-800">Hội An – Mỹ Sơn Di Sản</td>
+              <td class="px-4 py-3.5 text-slate-600 font-medium">22/06/2025</td>
+              <td class="px-4 py-3.5 text-slate-600">24/06/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-emerald-600">1,950,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:100%"></div></div>
+                  <span class="text-xs font-bold text-emerald-700">25/25 ✓</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full">Sắp khởi hành</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-500">Xe khách + Xe điện</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <a href="tour-instance-detail.html" class="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1.5 rounded-lg font-medium">Chi tiết</a>
+                  <span class="text-xs font-semibold text-emerald-700">Đã chốt</span>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 5 — In operation -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-700">HLG-2506-01</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-800">Hạ Long Vịnh Xanh Cruise</td>
+              <td class="px-4 py-3.5 text-slate-600">14/06/2025</td>
+              <td class="px-4 py-3.5 text-slate-600">15/06/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-emerald-600">2,950,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width:80%"></div></div>
+                  <span class="text-xs font-semibold text-emerald-600">24/30</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-teal-100 text-teal-700 px-2.5 py-1 rounded-full">🚢 Đang vận hành</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-500">Du thuyền</td>
+              <td class="px-4 py-3.5">
+                <a href="tour-instance-detail.html" class="text-xs bg-teal-600 hover:bg-teal-700 text-white px-2.5 py-1.5 rounded-lg font-medium">Theo dõi</a>
+              </td>
+            </tr>
+            <!-- Row 6 — Completed -->
+            <tr class="hover:bg-slate-50 transition-colors opacity-60">
+              <td class="px-4 py-3.5"><span class="font-mono text-xs font-bold text-slate-500">DLT-2506-01</span></td>
+              <td class="px-4 py-3.5 font-medium text-slate-600">Đà Lạt Thành Phố Hoa</td>
+              <td class="px-4 py-3.5 text-slate-500">08/06/2025</td>
+              <td class="px-4 py-3.5 text-slate-500">10/06/2025</td>
+              <td class="px-4 py-3.5 font-semibold text-slate-500">2,100,000₫</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-2">
+                  <div class="w-16 bg-slate-100 rounded-full h-2"><div class="bg-slate-300 h-2 rounded-full" style="width:70%"></div></div>
+                  <span class="text-xs font-semibold text-slate-400">14/20</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="inline-flex text-xs font-semibold bg-slate-100 text-slate-500 px-2.5 py-1 rounded-full">✓ Hoàn thành</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">Xe khách</td>
+              <td class="px-4 py-3.5">
+                <a href="settlement.html" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-2.5 py-1.5 rounded-lg font-medium">Quyết toán</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="px-4 py-3 border-t border-slate-100 flex items-center justify-between bg-slate-50">
+        <p class="text-xs text-slate-400">Hiển thị 1–6 / 42 đợt khởi hành</p>
+        <div class="flex gap-1">
+          <button class="px-3 py-1.5 text-xs border border-slate-200 rounded text-slate-400 hover:bg-slate-100">← Trước</button>
+          <button class="px-3 py-1.5 text-xs bg-emerald-600 text-white rounded font-semibold">1</button>
+          <button class="px-3 py-1.5 text-xs border border-slate-200 rounded text-slate-600 hover:bg-slate-100">2</button>
+          <button class="px-3 py-1.5 text-xs border border-slate-200 rounded text-slate-600 hover:bg-slate-100">3</button>
+          <button class="px-3 py-1.5 text-xs border border-slate-200 rounded text-slate-400 hover:bg-slate-100">Sau →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
