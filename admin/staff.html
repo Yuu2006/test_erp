@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhân viên — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <a href="digital-passport.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"/></svg>Hộ chiếu số</a>
+    <a href="vouchers.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>Voucher</a>
+    <p class="ns">Điều hành</p>
+    <a href="staff.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>Nhân viên</a>
+    <a href="tour-assignment.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>Điều động HDV</a>
+    <p class="ns">Sản phẩm</p>
+    <a href="tour-templates.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="tour-instances.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+    <p class="ns">Tài chính</p>
+    <a href="incident-log.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Sự cố<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-rose-500 text-white rounded-full text-xs font-bold px-1">3</span></a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <div>
+      <h1 class="font-bold text-slate-800">Quản lý Nhân viên</h1>
+      <p class="text-xs text-slate-400">32 nhân viên · 5 đang đi tour</p>
+    </div>
+    <div class="ml-auto flex items-center gap-2">
+      <button class="text-sm font-medium text-slate-600 border border-slate-300 hover:bg-slate-50 px-3 py-1.5 rounded-lg">Xuất Excel</button>
+      <button class="text-sm bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-1.5 rounded-lg flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        Thêm nhân viên
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6 space-y-5">
+    <!-- KPI row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+        <p class="text-xs text-slate-500">Tổng nhân viên</p>
+        <p class="text-2xl font-bold text-slate-800 mt-1">32</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+        <p class="text-xs text-slate-500">Hướng dẫn viên</p>
+        <p class="text-2xl font-bold text-emerald-600 mt-1">14</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+        <p class="text-xs text-slate-500">Đang đi tour</p>
+        <p class="text-2xl font-bold text-blue-600 mt-1">5</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+        <p class="text-xs text-slate-500">Đánh giá TB</p>
+        <p class="text-2xl font-bold text-amber-500 mt-1">4.7★</p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-wrap gap-3 items-center">
+      <div class="flex items-center gap-2 bg-slate-100 rounded-lg px-3 py-2 text-sm flex-1 min-w-[180px]">
+        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
+        <input type="text" placeholder="Tìm tên, email..." class="bg-transparent text-sm outline-none w-full placeholder-slate-400" />
+      </div>
+      <select class="bg-slate-100 text-sm text-slate-600 rounded-lg px-3 py-2 border-0 outline-none cursor-pointer">
+        <option>Tất cả chức vụ</option>
+        <option>Hướng dẫn viên</option>
+        <option>Sales</option>
+        <option>Điều hành</option>
+        <option>Kế toán</option>
+      </select>
+      <select class="bg-slate-100 text-sm text-slate-600 rounded-lg px-3 py-2 border-0 outline-none cursor-pointer">
+        <option>Tất cả trạng thái</option>
+        <option>Sẵn sàng</option>
+        <option>Đang đi tour</option>
+        <option>Nghỉ phép</option>
+      </select>
+      <select class="bg-slate-100 text-sm text-slate-600 rounded-lg px-3 py-2 border-0 outline-none cursor-pointer">
+        <option>Ngôn ngữ</option>
+        <option>Tiếng Anh</option>
+        <option>Tiếng Pháp</option>
+        <option>Tiếng Nhật</option>
+        <option>Tiếng Hàn</option>
+      </select>
+    </div>
+
+    <!-- Staff table -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200">
+              <th class="text-left px-5 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide min-w-[220px]">Nhân viên</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Chức vụ</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Ngôn ngữ / Kỹ năng</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Trạng thái</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Đánh giá</th>
+              <th class="text-left px-4 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Đang phụ trách</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <!-- Row 1 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">TH</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Nguyễn Trọng Hùng</p>
+                    <p class="text-xs text-slate-400">hung.nguyen@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">HDV</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded">FR</span>
+                  <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded">🌿 Eco</span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Leo núi</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full">Đang đi tour</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★★</span> <span class="text-xs text-slate-500">(4.9)</span></td>
+              <td class="px-4 py-3.5 text-xs font-medium text-slate-700">PQE-2507-01</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <button class="text-xs text-slate-600 hover:text-slate-900 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">LA</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Lê Thị Ánh</p>
+                    <p class="text-xs text-slate-400">anh.le@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">HDV</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded">JP</span>
+                  <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded">🌿 Eco</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Sẵn sàng</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★★</span> <span class="text-xs text-slate-500">(4.8)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <button class="text-xs text-slate-600 hover:text-slate-900 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button>
+                  <button class="text-xs text-emerald-700 hover:text-emerald-900 px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition font-medium">Điều động</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">PV</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Phạm Minh Vũ</p>
+                    <p class="text-xs text-slate-400">vu.pham@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full">Sales</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">CRM</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Sẵn sàng</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★</span><span class="text-amber-200 font-bold">★</span> <span class="text-xs text-slate-500">(4.2)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5"><button class="text-xs text-slate-600 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button></td>
+            </tr>
+            <!-- Row 4 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">DT</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Đặng Tuấn Khoa</p>
+                    <p class="text-xs text-slate-400">khoa.dang@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-indigo-100 text-indigo-700 px-2.5 py-1 rounded-full">Điều hành</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Logistics</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full">Đang đi tour</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★★</span> <span class="text-xs text-slate-500">(4.7)</span></td>
+              <td class="px-4 py-3.5 text-xs font-medium text-slate-700">NHI-2507-03</td>
+              <td class="px-4 py-3.5"><button class="text-xs text-slate-600 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button></td>
+            </tr>
+            <!-- Row 5 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-sky-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">HT</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Hoàng Thị Thu</p>
+                    <p class="text-xs text-slate-400">thu.hoang@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-sky-100 text-sky-700 px-2.5 py-1 rounded-full">Kế toán</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Excel</span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Hóa đơn</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Sẵn sàng</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★★</span> <span class="text-xs text-slate-500">(4.9)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5"><button class="text-xs text-slate-600 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button></td>
+            </tr>
+            <!-- Row 6 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">BN</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Bùi Ngọc Nam</p>
+                    <p class="text-xs text-slate-400">nam.bui@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">HDV</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded">KR</span>
+                  <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded">🌿 Eco</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-slate-100 text-slate-500 px-2.5 py-1 rounded-full">Nghỉ phép</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★</span><span class="text-amber-200 font-bold">★</span> <span class="text-xs text-slate-500">(4.5)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5"><button class="text-xs text-slate-600 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button></td>
+            </tr>
+            <!-- Row 7 -->
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-gradient-to-br from-violet-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">VL</div>
+                  <div>
+                    <p class="font-semibold text-slate-800">Vũ Quang Linh</p>
+                    <p class="text-xs text-slate-400">linh.vu@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">HDV</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                  <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded">FR</span>
+                  <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded">🌿 Eco</span>
+                  <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Nhiếp ảnh</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Sẵn sàng</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★★★</span> <span class="text-xs text-slate-500">(4.95)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5">
+                <div class="flex items-center gap-1.5">
+                  <button class="text-xs text-slate-600 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg transition">Xem</button>
+                  <button class="text-xs text-emerald-700 px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition font-medium">Điều động</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 8 -->
+            <tr class="hover:bg-slate-50 transition-colors opacity-60">
+              <td class="px-5 py-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 bg-slate-300 rounded-full flex items-center justify-center text-slate-600 font-bold text-sm flex-shrink-0">TQ</div>
+                  <div>
+                    <p class="font-semibold text-slate-500">Trần Quốc Bảo</p>
+                    <p class="text-xs text-slate-400">bao.tran@ecotour.vn</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">HDV</span></td>
+              <td class="px-4 py-3.5">
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">EN</span>
+                </div>
+              </td>
+              <td class="px-4 py-3.5"><span class="text-xs font-semibold bg-rose-100 text-rose-600 px-2.5 py-1 rounded-full">Nghỉ việc</span></td>
+              <td class="px-4 py-3.5"><span class="text-amber-400 font-bold">★★★</span><span class="text-amber-200 font-bold">★★</span> <span class="text-xs text-slate-400">(3.8)</span></td>
+              <td class="px-4 py-3.5 text-xs text-slate-400">—</td>
+              <td class="px-4 py-3.5"><button class="text-xs text-slate-400 px-2.5 py-1 bg-slate-100 rounded-lg cursor-default">Xem</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-500">
+        <span>Hiển thị 8/32 nhân viên</span>
+        <div class="flex items-center gap-1">
+          <button class="px-2 py-1 rounded hover:bg-slate-200">‹</button>
+          <button class="px-2 py-1 rounded bg-emerald-600 text-white font-medium">1</button>
+          <button class="px-2 py-1 rounded hover:bg-slate-200">2</button>
+          <button class="px-2 py-1 rounded hover:bg-slate-200">3</button>
+          <button class="px-2 py-1 rounded hover:bg-slate-200">4</button>
+          <button class="px-2 py-1 rounded hover:bg-slate-200">›</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

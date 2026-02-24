@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAN-2506-01 — Chi tiết đợt — EcoTour ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Inter',sans-serif;}
+    .ni{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:#94A3B8;text-decoration:none;transition:all .15s;}
+    .ni:hover{background:#1E293B;color:#F1F5F9;}
+    .na{background:rgba(16,185,129,.12);color:#34D399;}
+    .ns{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#475569;padding:16px 12px 4px;}
+    .tab-btn{padding:10px 20px;font-size:.875rem;font-weight:500;color:#64748B;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;transition:all .15s;}
+    .tab-btn.active{color:#059669;border-color:#059669;font-weight:600;}
+    .tab-panel{display:none;}.tab-panel.active{display:block;}
+    @media(max-width:1023px){#sb{transform:translateX(-100%);transition:transform .25s;z-index:50;}#sb.open{transform:translateX(0);}#mc{margin-left:0!important;}}
+  </style>
+</head>
+<body class="h-full bg-slate-100 text-slate-700">
+<aside id="sb" class="fixed top-0 left-0 h-screen w-64 bg-slate-900 flex flex-col overflow-y-auto">
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-slate-800">
+    <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+    <div><p class="text-white font-bold text-sm">EcoTour ERP</p><p class="text-emerald-400 text-xs">Du lịch bền vững</p></div>
+  </div>
+  <nav class="flex-1 px-3 py-3 space-y-0.5">
+    <p class="ns">Sản phẩm</p>
+    <a href="tour-templates.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Tour mẫu</a>
+    <a href="tour-instances.html" class="ni na"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Đợt khởi hành</a>
+    <p class="ns">Kinh doanh</p>
+    <a href="bookings.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>Đặt tour<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-amber-400 text-white rounded-full text-xs font-bold px-1">12</span></a>
+    <p class="ns">Điều hành</p>
+    <a href="tour-assignment.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Điều động HDV</a>
+    <a href="incident-log.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>Sự cố<span class="ml-auto inline-flex items-center justify-center min-w-[1.25rem] h-5 bg-rose-500 text-white rounded-full text-xs font-bold px-1">3</span></a>
+    <p class="ns">Tài chính</p>
+    <a href="expenses.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg>Chi phí</a>
+    <a href="settlement.html" class="ni"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Quyết toán</a>
+  </nav>
+</aside>
+<button onclick="document.getElementById('sb').classList.toggle('open')" class="lg:hidden fixed bottom-5 left-5 z-50 w-12 h-12 bg-emerald-600 rounded-full shadow-lg flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+<div id="mc" class="lg:ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <a href="tour-instances.html" class="text-slate-400 hover:text-slate-600">Đợt khởi hành</a>
+      <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-700 font-medium">HAN-2506-01</span>
+    </nav>
+    <div class="ml-auto flex gap-2">
+      <button class="px-3 py-2 text-sm border border-slate-200 rounded-lg hover:bg-slate-50 font-medium text-slate-600 flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        In danh sách
+      </button>
+      <button class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold">Chốt danh sách</button>
+    </div>
+  </header>
+
+  <main class="flex-1 p-6 space-y-5">
+    <!-- Header info card -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+      <div class="flex flex-col md:flex-row md:items-center gap-4">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 flex-wrap">
+            <span class="font-mono text-sm font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">HAN-2506-01</span>
+            <h1 class="text-xl font-bold text-slate-900">Hội An – Mỹ Sơn Di Sản</h1>
+            <span class="inline-flex text-xs font-semibold bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">Đang mở bán</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-1 mt-3 text-sm text-slate-500">
+            <span class="flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>15/06 – 17/06/2025</span>
+            <span class="flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Hội An, Quảng Nam</span>
+            <span class="flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>3 ngày 2 đêm</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="text-center">
+            <p class="text-xs text-slate-400 mb-1">Lấp đầy</p>
+            <div class="relative w-20 h-20">
+              <svg class="w-20 h-20 -rotate-90" viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="16" fill="none" stroke="#E2E8F0" stroke-width="3"/>
+                <circle cx="18" cy="18" r="16" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="100.53" stroke-dashoffset="12.06" stroke-linecap="round"/>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <span class="text-lg font-bold text-emerald-600">88%</span>
+              </div>
+            </div>
+            <p class="text-xs font-semibold text-slate-600 mt-1">22/25 chỗ</p>
+          </div>
+          <div class="text-center">
+            <p class="text-xs text-slate-400 mb-1">Doanh thu</p>
+            <p class="text-2xl font-bold text-slate-800">43.7tr</p>
+            <p class="text-xs text-emerald-600 font-medium mt-1">1,985,000₫/người</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="border-b border-slate-200 overflow-x-auto">
+        <div class="flex">
+          <button onclick="switchTab(0)" class="tab-btn active" id="tab-0">Tổng quan</button>
+          <button onclick="switchTab(1)" class="tab-btn" id="tab-1">Danh sách khách <span class="ml-1 text-xs bg-slate-200 text-slate-600 font-bold px-1.5 py-0.5 rounded-full">22</span></button>
+          <button onclick="switchTab(2)" class="tab-btn" id="tab-2">HDV điều động</button>
+          <button onclick="switchTab(3)" class="tab-btn" id="tab-3">Chi phí</button>
+          <button onclick="switchTab(4)" class="tab-btn" id="tab-4">Sự cố <span class="ml-1 text-xs bg-rose-100 text-rose-600 font-bold px-1.5 py-0.5 rounded-full">1</span></button>
+        </div>
+      </div>
+
+      <!-- Tab 0: Overview -->
+      <div id="panel-0" class="tab-panel active p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <h3 class="font-semibold text-slate-700">Thông tin chuyến đi</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Giá bán hiện tại</span><span class="font-semibold text-emerald-600">1,985,000 ₫/người</span></div>
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Giá cơ sở</span><span class="font-semibold text-slate-700">1,850,000 ₫</span></div>
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Sức chứa tối đa</span><span class="font-semibold text-slate-700">25 người</span></div>
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Đã đặt / Còn chỗ</span><span class="font-semibold text-slate-700">22 / <span class="text-emerald-600">3 trống</span></span></div>
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Điểm đón</span><span class="font-semibold text-slate-700">Sân bay Đà Nẵng</span></div>
+              <div class="flex justify-between py-2 border-b border-slate-100 text-sm"><span class="text-slate-500">Phương tiện</span><span class="font-semibold text-slate-700">Xe khách 35 chỗ + Xe điện</span></div>
+              <div class="flex justify-between py-2 text-sm"><span class="text-slate-500">Hướng dẫn viên</span><span class="font-semibold text-emerald-600">Lê Thị Hương (EN/VI)</span></div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-semibold text-slate-700">Cài đặt & Tuỳ chỉnh</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Giá bán (điều chỉnh động)</label>
+                <div class="flex items-center gap-2">
+                  <input type="text" value="1,985,000" class="flex-1 border border-slate-200 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-400" />
+                  <span class="text-xs text-slate-400">₫/người</span>
+                  <button class="px-3 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-lg hover:bg-emerald-700">Cập nhật</button>
+                </div>
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5 block">Thông báo tự động</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"><input type="checkbox" checked class="accent-emerald-600" />Email xác nhận đặt chỗ</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer mt-1.5"><input type="checkbox" checked class="accent-emerald-600" />SMS nhắc nhở 48h trước</label>
+                <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer mt-1.5"><input type="checkbox" class="accent-emerald-600" />Thông báo còn 3 chỗ cuối</label>
+              </div>
+              <div class="flex gap-2 pt-2">
+                <button class="flex-1 py-2 text-sm border border-amber-200 bg-amber-50 text-amber-700 rounded-lg font-medium hover:bg-amber-100">Khóa bán vé</button>
+                <button class="flex-1 py-2 text-sm border border-red-200 bg-rose-50 text-rose-600 rounded-lg font-medium hover:bg-rose-100">Hủy đợt</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 1: Passenger list -->
+      <div id="panel-1" class="tab-panel p-6">
+        <div class="flex items-center justify-between mb-4">
+          <p class="text-sm text-slate-500">22 hành khách đã xác nhận</p>
+          <button class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Xuất Excel</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">#</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Họ tên</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Ngày sinh</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">CCCD/HC</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Y tế</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">SDT khẩn cấp</th>
+                <th class="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">Đơn đặt</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 text-slate-400">1</td>
+                <td class="px-4 py-3 font-medium text-slate-800">Nguyễn Thị Lan</td>
+                <td class="px-4 py-3 text-slate-500">15/03/1985</td>
+                <td class="px-4 py-3 text-slate-500 font-mono text-xs">079085012345</td>
+                <td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-xs font-medium bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full">🚨 Dị ứng hải sản</span></td>
+                <td class="px-4 py-3 text-slate-500">0912 345 678</td>
+                <td class="px-4 py-3"><a href="booking-detail.html" class="text-xs text-emerald-600 hover:underline font-medium">ĐT-2506-0012</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 text-slate-400">2</td>
+                <td class="px-4 py-3 font-medium text-slate-800">Trần Văn Bình</td>
+                <td class="px-4 py-3 text-slate-500">22/07/1978</td>
+                <td class="px-4 py-3 text-slate-500 font-mono text-xs">036078056789</td>
+                <td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">⚠ Cao huyết áp</span></td>
+                <td class="px-4 py-3 text-slate-500">0987 654 321</td>
+                <td class="px-4 py-3"><a href="booking-detail.html" class="text-xs text-emerald-600 hover:underline font-medium">ĐT-2506-0012</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 text-slate-400">3</td>
+                <td class="px-4 py-3 font-medium text-slate-800">Lê Thị Cẩm</td>
+                <td class="px-4 py-3 text-slate-500">08/11/1992</td>
+                <td class="px-4 py-3 text-slate-500 font-mono text-xs">001092034567</td>
+                <td class="px-4 py-3"><span class="inline-flex text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✓ Bình thường</span></td>
+                <td class="px-4 py-3 text-slate-500">0903 111 222</td>
+                <td class="px-4 py-3"><a href="booking-detail.html" class="text-xs text-emerald-600 hover:underline font-medium">ĐT-2506-0015</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 text-slate-400">4</td>
+                <td class="px-4 py-3 font-medium text-slate-800">Phạm Quốc Dũng</td>
+                <td class="px-4 py-3 text-slate-500">14/05/1965</td>
+                <td class="px-4 py-3 text-slate-500 font-mono text-xs">079065078901</td>
+                <td class="px-4 py-3"><span class="inline-flex items-center gap-1 text-xs font-medium bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full">🚨 Tiểu đường T2</span></td>
+                <td class="px-4 py-3 text-slate-500">0961 222 333</td>
+                <td class="px-4 py-3"><a href="booking-detail.html" class="text-xs text-emerald-600 hover:underline font-medium">ĐT-2506-0018</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 text-slate-400">5–22</td>
+                <td class="px-4 py-3 text-slate-400 italic" colspan="6">... 18 hành khách khác (không có ghi chú y tế)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Medical summary -->
+        <div class="mt-4 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <p class="text-sm font-semibold text-rose-700 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>Cảnh báo y tế cho hướng dẫn viên</p>
+          <ul class="mt-2 text-xs text-rose-600 space-y-1">
+            <li>• Nguyễn Thị Lan — Dị ứng hải sản nghiêm trọng. Mang theo EpiPen.</li>
+            <li>• Trần Văn Bình — Cao huyết áp. Tránh hoạt động leo núi cường độ cao.</li>
+            <li>• Phạm Quốc Dũng — Tiểu đường Type 2. Mang sẵn đường/ bánh quy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 2: HDV -->
+      <div id="panel-2" class="tab-panel p-6">
+        <div class="flex items-center justify-between mb-4">
+          <p class="text-sm text-slate-500">Hướng dẫn viên đã điều động</p>
+          <a href="tour-assignment.html" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Thêm HDV</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-4">
+            <div class="w-14 h-14 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">LH</div>
+            <div class="flex-1">
+              <p class="font-semibold text-slate-800">Lê Thị Hương</p>
+              <div class="flex flex-wrap gap-1.5 mt-1">
+                <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">Tiếng Anh</span>
+                <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">Tiếng Pháp</span>
+                <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-medium">🌿 Eco Guide</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1.5">⭐ 4.9 · 142 chuyến · <span class="text-emerald-600 font-medium">Trưởng đoàn</span></p>
+            </div>
+            <button class="text-rose-400 hover:text-rose-600 text-xs">Gỡ</button>
+          </div>
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-4">
+            <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">NM</div>
+            <div class="flex-1">
+              <p class="font-semibold text-slate-800">Nguyễn Minh Tâm</p>
+              <div class="flex flex-wrap gap-1.5 mt-1">
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">Tiếng Nhật</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1.5">⭐ 4.7 · 68 chuyến · <span class="text-slate-600 font-medium">Hỗ trợ</span></p>
+            </div>
+            <button class="text-rose-400 hover:text-rose-600 text-xs">Gỡ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Expenses -->
+      <div id="panel-3" class="tab-panel p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <p class="text-sm font-semibold text-slate-700">Chi phí thực tế</p>
+            <p class="text-xs text-slate-400 mt-0.5">So sánh với định mức hợp đồng</p>
+          </div>
+          <button class="text-sm bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-3 py-2 rounded-lg flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Thêm chi phí</button>
+        </div>
+        <div class="space-y-2">
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg text-sm">
+            <div class="flex-1"><p class="font-medium text-slate-800">Xe khách 35 chỗ (3 ngày)</p><p class="text-xs text-slate-400">Vận chuyển • 14/06/2025</p></div>
+            <div class="text-right"><p class="font-semibold text-slate-800">4,200,000₫</p><p class="text-xs text-emerald-600">HĐ: 4,200,000₫ ✓</p></div>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg text-sm">
+            <div class="flex-1"><p class="font-medium text-slate-800">Khách sạn Ancient House (2 đêm × 22)</p><p class="text-xs text-slate-400">Lưu trú • 15-16/06/2025</p></div>
+            <div class="text-right"><p class="font-semibold text-slate-800">19,800,000₫</p><p class="text-xs text-emerald-600">HĐ: 19,800,000₫ ✓</p></div>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm">
+            <div class="flex-1"><p class="font-medium text-slate-800">Bữa ăn (5 bữa × 22 người)</p><p class="text-xs text-slate-400">Ăn uống • Thực tế cao hơn dự kiến</p></div>
+            <div class="text-right"><p class="font-semibold text-amber-700">6,050,000₫</p><p class="text-xs text-amber-600">HĐ: 5,500,000₫ ↑10%</p></div>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg text-sm">
+            <div class="flex-1"><p class="font-medium text-slate-800">Vé tham quan Mỹ Sơn (22 người)</p><p class="text-xs text-slate-400">Vé vào cửa • 16/06/2025</p></div>
+            <div class="text-right"><p class="font-semibold text-slate-800">3,300,000₫</p><p class="text-xs text-emerald-600">HĐ: 3,300,000₫ ✓</p></div>
+          </div>
+        </div>
+        <div class="mt-4 p-4 bg-white border border-slate-200 rounded-xl">
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div><p class="text-xs text-slate-400">Tổng chi phí</p><p class="text-xl font-bold text-slate-800 mt-1">33.35tr</p></div>
+            <div><p class="text-xs text-slate-400">Doanh thu</p><p class="text-xl font-bold text-emerald-600 mt-1">43.67tr</p></div>
+            <div><p class="text-xs text-slate-400">Lợi nhuận gộp</p><p class="text-xl font-bold text-teal-600 mt-1">10.32tr</p><p class="text-xs text-teal-600 font-medium">23.6%</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Incidents -->
+      <div id="panel-4" class="tab-panel p-6">
+        <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <p class="font-semibold text-rose-800">Khách phản ứng dị ứng thức ăn</p>
+              <span class="text-xs font-semibold bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full">Đang xử lý</span>
+            </div>
+            <p class="text-xs text-rose-600 mt-1">15/06/2025 12:35 · Nhà hàng Mì Quảng, Hội An</p>
+            <p class="text-sm text-rose-700 mt-2">Khách Nguyễn Thị Lan bị phản ứng nhẹ sau bữa trưa. Đã xử lý sơ cứu, liên hệ khách sạn và người thân. Khách đồng ý tiếp tục tour.</p>
+            <div class="flex gap-2 mt-3">
+              <a href="incident-log.html" class="text-xs bg-rose-600 hover:bg-rose-700 text-white px-3 py-1.5 rounded-lg font-medium">Xem báo cáo đầy đủ</a>
+              <button class="text-xs bg-white border border-rose-200 text-rose-600 px-3 py-1.5 rounded-lg font-medium hover:bg-rose-50">Đóng sự cố</button>
+            </div>
+          </div>
+        </div>
+        <button class="mt-4 w-full py-3 text-sm border-2 border-dashed border-rose-200 hover:border-rose-300 text-rose-500 hover:bg-rose-50 rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          Báo cáo sự cố mới
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+function switchTab(n) {
+  for(let i=0;i<5;i++){
+    document.getElementById('tab-'+i).classList.remove('active');
+    document.getElementById('panel-'+i).classList.remove('active');
+  }
+  document.getElementById('tab-'+n).classList.add('active');
+  document.getElementById('panel-'+n).classList.add('active');
+}
+</script>
+</body>
+</html>

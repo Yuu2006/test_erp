@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDV Dashboard — EcoTour Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-slate-100">
+
+<div class="max-w-sm mx-auto min-h-screen bg-white flex flex-col relative shadow-2xl">
+  <!-- Top bar -->
+  <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 pt-10 pb-6">
+    <div class="flex items-center justify-between mb-4">
+      <div><p class="text-emerald-200 text-xs">Chào buổi sáng 👋</p><h1 class="text-xl font-extrabold">Nguyễn Văn Hùng</h1></div>
+      <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center font-bold text-base">NH</div>
+    </div>
+    <div class="flex gap-3">
+      <div class="flex-1 bg-white/15 rounded-xl p-3 text-center"><p class="text-2xl font-extrabold">1</p><p class="text-emerald-200 text-[10px]">Tour hôm nay</p></div>
+      <div class="flex-1 bg-white/15 rounded-xl p-3 text-center"><p class="text-2xl font-extrabold">18</p><p class="text-emerald-200 text-[10px]">Khách</p></div>
+      <div class="flex-1 bg-white/15 rounded-xl p-3 text-center"><p class="text-2xl font-extrabold text-emerald-300">4.9</p><p class="text-emerald-200 text-[10px]">⭐ Rating</p></div>
+    </div>
+  </div>
+
+  <div class="flex-1 overflow-y-auto px-4 py-4 space-y-4 pb-24">
+    <!-- Today's tour card -->
+    <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-4 text-white">
+      <div class="flex items-start justify-between mb-3">
+        <div><p class="text-emerald-200 text-xs font-semibold">TOUR ĐANG CHẠY</p><h3 class="font-extrabold text-lg">Phú Quốc Eco Discovery</h3><p class="text-emerald-200 text-xs mt-0.5">PQE-2507-02 · Ngày 2/4</p></div>
+        <span class="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded-full">🟢 Live</span>
+      </div>
+      <div class="flex items-center gap-4 text-sm">
+        <div><p class="text-emerald-200 text-[10px]">Khách</p><p class="font-bold">18/20</p></div>
+        <div><p class="text-emerald-200 text-[10px]">Hoạt động tiếp theo</p><p class="font-bold">10:00 Snorkeling</p></div>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <a href="attendance.html" class="flex-1 text-center bg-white/20 hover:bg-white/30 py-2 rounded-xl text-xs font-bold">Điểm danh</a>
+        <a href="tour-detail.html" class="flex-1 text-center bg-white text-emerald-700 hover:bg-emerald-50 py-2 rounded-xl text-xs font-bold">Chi tiết tour</a>
+      </div>
+    </div>
+
+    <!-- Weather widget -->
+    <div class="bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl p-4 text-white flex items-center gap-4">
+      <div class="text-4xl">⛅</div>
+      <div><p class="text-xs text-sky-200">Thời tiết Phú Quốc · Bãi Sao</p><p class="text-2xl font-extrabold">29°C</p><p class="text-xs text-sky-200">Ít mây · Sóng biển 0.8m · UV 7</p></div>
+      <div class="ml-auto text-right text-xs text-sky-200"><p>🌊 Lý tưởng</p><p>Snorkeling OK</p></div>
+    </div>
+
+    <!-- Quick actions -->
+    <div>
+      <p class="text-xs font-semibold text-slate-400 mb-2">Thao tác nhanh</p>
+      <div class="grid grid-cols-4 gap-2">
+        <a href="attendance.html" class="flex flex-col items-center gap-1.5 bg-slate-50 rounded-xl p-3 hover:bg-emerald-50 transition"><div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-xl">✅</div><span class="text-[10px] font-semibold text-slate-600 text-center">Điểm danh</span></a>
+        <a href="eco-action.html" class="flex flex-col items-center gap-1.5 bg-slate-50 rounded-xl p-3 hover:bg-emerald-50 transition"><div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center text-xl">🌿</div><span class="text-[10px] font-semibold text-slate-600 text-center">Eco Action</span></a>
+        <a href="expense-entry.html" class="flex flex-col items-center gap-1.5 bg-slate-50 rounded-xl p-3 hover:bg-emerald-50 transition"><div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-xl">💵</div><span class="text-[10px] font-semibold text-slate-600 text-center">Chi phí</span></a>
+        <a href="incident-report.html" class="flex flex-col items-center gap-1.5 bg-slate-50 rounded-xl p-3 hover:bg-rose-50 transition"><div class="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center text-xl">🚨</div><span class="text-[10px] font-semibold text-slate-600 text-center">Sự cố</span></a>
+      </div>
+    </div>
+
+    <!-- Notification feed -->
+    <div>
+      <p class="text-xs font-semibold text-slate-400 mb-2">Thông báo</p>
+      <div class="space-y-2">
+        <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5">
+          <span class="text-base mt-0.5">⚠️</span>
+          <div class="flex-1"><p class="text-xs font-semibold text-amber-800">Thời tiết cảnh báo: UV cao chiều nay</p><p class="text-[10px] text-amber-600 mt-0.5">Nhắc khách dùng kem chống nắng SPF 50+</p></div><span class="text-[10px] text-amber-400 shrink-0">09:00</span>
+        </div>
+        <div class="flex items-start gap-3 bg-emerald-50 border border-emerald-200 rounded-xl px-3 py-2.5">
+          <span class="text-base mt-0.5">🌱</span>
+          <div class="flex-1"><p class="text-xs font-semibold text-emerald-800">EcoAction: Workshop trồng san hô 13:00</p><p class="text-[10px] text-emerald-600 mt-0.5">Nhớ chụp ảnh xác nhận để cộng GP cho khách</p></div><span class="text-[10px] text-emerald-400 shrink-0">08:30</span>
+        </div>
+        <div class="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+          <span class="text-base mt-0.5">📋</span>
+          <div class="flex-1"><p class="text-xs font-semibold text-slate-700">Báo cáo chi phí ngày 1 chờ nộp</p><p class="text-[10px] text-slate-400 mt-0.5">Hạn nộp: 22:00 hôm nay</p></div><span class="text-[10px] text-slate-400 shrink-0">07:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom nav -->
+  <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-white border-t border-slate-200 flex">
+    <a href="dashboard.html" class="flex-1 flex flex-col items-center py-2.5 gap-0.5 text-emerald-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg><span class="text-[9px] font-semibold">Trang chủ</span></a>
+    <a href="tour-detail.html" class="flex-1 flex flex-col items-center py-2.5 gap-0.5 text-slate-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg><span class="text-[9px] font-semibold">Tour</span></a>
+    <a href="eco-action.html" class="flex-1 flex flex-col items-center py-2.5 gap-0.5 text-slate-400"><span class="text-xl leading-none">🌿</span><span class="text-[9px] font-semibold">Eco</span></a>
+    <a href="expense-entry.html" class="flex-1 flex flex-col items-center py-2.5 gap-0.5 text-slate-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-[9px] font-semibold">Chi phí</span></a>
+    <a href="incident-report.html" class="flex-1 flex flex-col items-center py-2.5 gap-0.5 text-slate-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg><span class="text-[9px] font-semibold">Sự cố</span></a>
+  </nav>
+</div>
+</body>
+</html>
